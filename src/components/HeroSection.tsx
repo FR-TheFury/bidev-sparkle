@@ -15,16 +15,16 @@ const HeroSection = () => {
       }}
     >
       {/* Overlay gradient */}
-      <div className="absolute inset-0 bg-gradient-hero"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/60"></div>
       
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="max-w-4xl mx-auto">
           {/* Main Title */}
           <ScrollAnimationWrapper animation="fade-in" delay="100ms">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl">
               Agence
-              <span className="block gradient-text-accent">
+              <span className="block gradient-text-accent drop-shadow-xl">
                 Web Marketing
               </span>
             </h1>
@@ -32,7 +32,7 @@ const HeroSection = () => {
           
           {/* Subtitle */}
           <ScrollAnimationWrapper animation="fade-in" delay="300ms">
-            <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-white mb-8 max-w-2xl mx-auto leading-relaxed drop-shadow-lg">
               Notre promesse : "vous accompagner jusqu'à l'atteinte de vos objectifs!"
             </p>
           </ScrollAnimationWrapper>
@@ -40,12 +40,12 @@ const HeroSection = () => {
           {/* CTA Buttons */}
           <ScrollAnimationWrapper animation="fade-in" delay="500ms">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
-              <button className="btn-hero group flex items-center">
+              <button className="bg-white text-black px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl group flex items-center">
                 Démarrer votre projet
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </button>
               
-              <button className="btn-outline-hero group flex items-center">
+              <button className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg border border-white/30 font-semibold hover:bg-white/30 transition-all duration-300 group flex items-center">
                 <Play className="mr-2 h-5 w-5" />
                 Voir nos réalisations
               </button>
@@ -56,16 +56,16 @@ const HeroSection = () => {
           <ScrollAnimationWrapper animation="fade-in" delay="700ms">
             <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">10+</div>
-                <div className="text-white/70 text-sm md:text-base">Années d'expérience</div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2 drop-shadow-lg">10+</div>
+                <div className="text-white/90 text-sm md:text-base drop-shadow-md">Années d'expérience</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">100+</div>
-                <div className="text-white/70 text-sm md:text-base">Projets réalisés</div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2 drop-shadow-lg">100+</div>
+                <div className="text-white/90 text-sm md:text-base drop-shadow-md">Projets réalisés</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">63%</div>
-                <div className="text-white/70 text-sm md:text-base">Partage vidéo</div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2 drop-shadow-lg">63%</div>
+                <div className="text-white/90 text-sm md:text-base drop-shadow-md">Partage vidéo</div>
               </div>
             </div>
           </ScrollAnimationWrapper>
@@ -74,28 +74,28 @@ const HeroSection = () => {
         {/* Services Encarts */}
         <ScrollAnimationWrapper animation="fade-in" delay="900ms">
           <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto mb-16 mt-12">
-            <div className="flex items-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
-              <div className="p-2 rounded-lg bg-white/20 mr-3">
-                <Code className="h-5 w-5 text-white" />
+            <div className="flex items-center p-5 bg-white/95 backdrop-blur-sm rounded-xl border border-white/30 hover:bg-white transition-all duration-300 shadow-lg">
+              <div className="p-3 rounded-lg bg-primary/10 mr-4">
+                <Code className="h-6 w-6 text-primary" />
               </div>
               <div>
-                <h3 className="text-sm font-semibold text-white">
+                <h3 className="text-base font-semibold text-gray-800">
                   Développement Web
                 </h3>
-                <p className="text-xs text-white/80">
+                <p className="text-sm text-gray-600">
                   Sites internet modernes
                 </p>
               </div>
             </div>
-            <div className="flex items-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
-              <div className="p-2 rounded-lg bg-white/20 mr-3">
-                <Smartphone className="h-5 w-5 text-white" />
+            <div className="flex items-center p-5 bg-white/95 backdrop-blur-sm rounded-xl border border-white/30 hover:bg-white transition-all duration-300 shadow-lg">
+              <div className="p-3 rounded-lg bg-primary/10 mr-4">
+                <Smartphone className="h-6 w-6 text-primary" />
               </div>
               <div>
-                <h3 className="text-sm font-semibold text-white">
+                <h3 className="text-base font-semibold text-gray-800">
                   Développement Application
                 </h3>
-                <p className="text-xs text-white/80">
+                <p className="text-sm text-gray-600">
                   Applications sur mesure
                 </p>
               </div>
