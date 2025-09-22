@@ -36,12 +36,13 @@ const AboutSection = () => {
         <ScrollAnimationWrapper animation="fade-in">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Pourquoi Choisir
-              <span className="block gradient-text-accent">BiDev Solutions</span>
+              Notre
+              <span className="block gradient-text-accent">Savoir Faire</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Nous combinons expertise technique et innovation pour créer des solutions web 
-              qui propulsent votre entreprise vers le succès numérique
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+              En s'appuyant sur 10 années d'expérience dans l'univers du digital, BI DEVELOPPEMENT, 
+              agence webmarketing à Marcq-en-Baroeul près de Lille, vous offre de multiples services 
+              ainsi qu'un accompagnement complet afin de permettre à votre entreprise une croissance online.
             </p>
           </div>
         </ScrollAnimationWrapper>

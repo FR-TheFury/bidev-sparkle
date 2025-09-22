@@ -1,26 +1,44 @@
-import { Globe, BarChart3, Code, Smartphone } from 'lucide-react';
+import { Code, Brain, BarChart3, Smartphone, Shield, Zap } from 'lucide-react';
 import { ScrollAnimationWrapper } from '@/hooks/use-scroll-animation';
 
 const ServiceCards = () => {
   const services = [
     {
       icon: Code,
-      title: "Développement Web",
-      description: "Sites web modernes, applications web sur mesure et e-commerce performants avec les dernières technologies React, Vue.js et Node.js",
-      features: ["Sites vitrines premium", "E-commerce avancé", "Applications web sur mesure", "Optimisation SEO"],
-      color: "from-primary via-primary-glow to-secondary",
-      highlight: "Solutions sur mesure",
-      stats: "50+ projets réalisés"
+      title: "Motion Design",
+      description: "Donnez vie à vos idées avec des messages percutants et rythmés. Faites passer un maximum de messages clefs en un minimum de temps auprès du plus grand nombre de clients potentiels.",
+      features: ["Messages clefs efficaces", "Augmentation viralité", "Bouche à oreille 2.0", "63% de partage vidéo"],
+      color: "from-blue-500 via-purple-600 to-pink-500",
+      highlight: "63% partage vidéo",
+      stats: "Impact garanti"
+    },
+    {
+      icon: Brain,
+      title: "Le Concept",
+      description: "Une agence de communication digitale qui fait bien plus que créer un site internet. Accompagnement global dans l'élaboration de votre communication.",
+      features: ["Introspection entreprise", "Communication globale", "Génération croissance", "Toutes tailles d'entreprises"],
+      color: "from-purple-500 via-pink-500 to-red-500",
+      highlight: "Communication globale",
+      stats: "Accompagnement complet"
     },
     {
       icon: BarChart3,
-      title: "Intelligence d'Affaires",
-      description: "Transformez vos données en insights stratégiques avec nos solutions BI avancées et tableaux de bord interactifs",
-      features: ["Dashboards interactifs", "Analyse prédictive", "Rapports automatisés", "KPI en temps réel"],
-      color: "from-secondary via-accent to-primary",
-      highlight: "Données en temps réel",
-      stats: "99.9% de disponibilité"
+      title: "Référencement WEB",
+      description: "Donnez de la visibilité à votre entreprise et mesurez les retombées de vos actions en temps réel. SEO, SEA, netlinking.",
+      features: ["SEO naturel Google", "Campagnes SEA", "Netlinking", "Mesure temps réel"],
+      color: "from-green-500 via-teal-500 to-blue-500",
+      highlight: "Visibilité maximale",
+      stats: "Résultats mesurables"
     },
+    {
+      icon: Smartphone,
+      title: "Identité Graphique",
+      description: "Proximité et temps consacré à la compréhension de votre projet pour retranscrire les messages qui toucheront vos clients potentiels.",
+      features: ["Design professionnel", "Messages authentiques", "Équipe spécialisée", "Proximité client"],
+      color: "from-orange-500 via-red-500 to-pink-500",
+      highlight: "Design authentique",
+      stats: "Messages impactants"
+    }
   ];
 
   return (
@@ -33,10 +51,10 @@ const ServiceCards = () => {
         <ScrollAnimationWrapper animation="fade-in">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Nos <span className="gradient-text-primary">Spécialités</span>
+              Nos <span className="gradient-text-primary">Services</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Deux domaines d'expertise complémentaires pour transformer votre vision en réalité digitale
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Une expertise complète pour votre réussite digitale, de la conception à la croissance online
             </p>
           </div>
         </ScrollAnimationWrapper>
@@ -109,10 +127,10 @@ const ServiceCards = () => {
         <ScrollAnimationWrapper animation="fade-in" delay="600ms">
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {[
-              { icon: Globe, label: "Sites vitrines" },
-              { icon: Smartphone, label: "Applications mobiles" },
-              { icon: BarChart3, label: "Tableaux de bord" },
-              { icon: Code, label: "Solutions sur mesure" },
+              { icon: Shield, label: "Accompagnement" },
+              { icon: Zap, label: "Croissance rapide" },
+              { icon: Brain, label: "Stratégie digitale" },
+              { icon: Code, label: "Développement" },
             ].map((item, index) => {
               const IconComponent = item.icon;
               return (

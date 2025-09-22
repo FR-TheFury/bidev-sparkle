@@ -23,9 +23,9 @@ const HeroSection = () => {
           {/* Main Title */}
           <ScrollAnimationWrapper animation="fade-in" delay="100ms">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Solutions Web
+              Agence
               <span className="block gradient-text-accent">
-                Innovantes
+                Web Marketing
               </span>
             </h1>
           </ScrollAnimationWrapper>
@@ -33,7 +33,7 @@ const HeroSection = () => {
           {/* Subtitle */}
           <ScrollAnimationWrapper animation="fade-in" delay="300ms">
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Développement web moderne et intelligence d'affaires pour propulser votre entreprise vers le futur numérique
+              Notre promesse : "vous accompagner jusqu'à l'atteinte de vos objectifs!"
             </p>
           </ScrollAnimationWrapper>
           
@@ -56,20 +56,20 @@ const HeroSection = () => {
           <ScrollAnimationWrapper animation="fade-in" delay="700ms">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">50+</div>
-                <div className="text-white/70 text-sm md:text-base">Projets réalisés</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">5+</div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">10+</div>
                 <div className="text-white/70 text-sm md:text-base">Années d'expérience</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">30+</div>
-                <div className="text-white/70 text-sm md:text-base">Clients satisfaits</div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">100+</div>
+                <div className="text-white/70 text-sm md:text-base">Projets réalisés</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">63%</div>
+                <div className="text-white/70 text-sm md:text-base">Partage vidéo</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-white mb-2">24/7</div>
-                <div className="text-white/70 text-sm md:text-base">Support technique</div>
+                <div className="text-white/70 text-sm md:text-base">Accompagnement</div>
               </div>
             </div>
           </ScrollAnimationWrapper>
