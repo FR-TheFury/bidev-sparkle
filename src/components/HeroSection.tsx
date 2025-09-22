@@ -73,7 +73,7 @@ const HeroSection = () => {
         
         {/* Services Encarts */}
         <ScrollAnimationWrapper animation="fade-in" delay="900ms">
-          <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto mb-16">
+          <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto mb-16 mt-12">
             <div className="flex items-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
               <div className="p-2 rounded-lg bg-white/20 mr-3">
                 <Code className="h-5 w-5 text-white" />

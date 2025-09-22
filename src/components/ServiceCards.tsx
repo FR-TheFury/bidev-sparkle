@@ -5,39 +5,39 @@ const ServiceCards = () => {
   const services = [
     {
       icon: Code,
-      title: "Motion Design",
-      description: "Donnez vie à vos idées avec des messages percutants et rythmés. Faites passer un maximum de messages clefs en un minimum de temps auprès du plus grand nombre de clients potentiels.",
-      features: ["Messages clefs efficaces", "Augmentation viralité", "Bouche à oreille 2.0", "63% de partage vidéo"],
+      title: "Développement Web",
+      description: "Créez votre présence en ligne avec des sites web modernes, performants et sur mesure. De la vitrine au e-commerce complexe.",
+      features: ["Sites vitrines", "E-commerce", "Applications web", "Sites responsives"],
       color: "from-blue-500 via-purple-600 to-pink-500",
-      highlight: "63% partage vidéo",
-      stats: "Impact garanti"
-    },
-    {
-      icon: Brain,
-      title: "Le Concept",
-      description: "Une agence de communication digitale qui fait bien plus que créer un site internet. Accompagnement global dans l'élaboration de votre communication.",
-      features: ["Introspection entreprise", "Communication globale", "Génération croissance", "Toutes tailles d'entreprises"],
-      color: "from-purple-500 via-pink-500 to-red-500",
-      highlight: "Communication globale",
-      stats: "Accompagnement complet"
-    },
-    {
-      icon: BarChart3,
-      title: "Référencement WEB",
-      description: "Donnez de la visibilité à votre entreprise et mesurez les retombées de vos actions en temps réel. SEO, SEA, netlinking.",
-      features: ["SEO naturel Google", "Campagnes SEA", "Netlinking", "Mesure temps réel"],
-      color: "from-green-500 via-teal-500 to-blue-500",
-      highlight: "Visibilité maximale",
-      stats: "Résultats mesurables"
+      highlight: "Sur mesure",
+      stats: "Sites performants"
     },
     {
       icon: Smartphone,
-      title: "Identité Graphique",
-      description: "Proximité et temps consacré à la compréhension de votre projet pour retranscrire les messages qui toucheront vos clients potentiels.",
-      features: ["Design professionnel", "Messages authentiques", "Équipe spécialisée", "Proximité client"],
+      title: "Développement Application",
+      description: "Applications mobiles natives et cross-platform pour iOS et Android. Solutions mobiles complètes adaptées à vos besoins.",
+      features: ["iOS & Android", "Cross-platform", "UX/UI design", "Maintenance"],
+      color: "from-green-500 via-teal-500 to-blue-500",
+      highlight: "Multi-plateforme",
+      stats: "Apps natives"
+    },
+    {
+      icon: BarChart3,
+      title: "Référencement Web",
+      description: "Donnez de la visibilité à votre entreprise et mesurez les retombées de vos actions en temps réel. SEO, SEA, netlinking.",
+      features: ["SEO naturel Google", "Campagnes SEA", "Netlinking", "Analytics"],
       color: "from-orange-500 via-red-500 to-pink-500",
-      highlight: "Design authentique",
-      stats: "Messages impactants"
+      highlight: "Visibilité max",
+      stats: "Résultats mesurables"
+    },
+    {
+      icon: Brain,
+      title: "Solution Complète",
+      description: "De la création du nom de domaine au déploiement final. Nous gérons l'intégralité de votre projet web de A à Z.",
+      features: ["Nom de domaine", "Hébergement", "Développement", "Déploiement"],
+      color: "from-purple-500 via-indigo-500 to-blue-500",
+      highlight: "Tout inclus",
+      stats: "Service complet"
     }
   ];
 
@@ -127,10 +127,10 @@ const ServiceCards = () => {
         <ScrollAnimationWrapper animation="fade-in" delay="600ms">
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {[
-              { icon: Shield, label: "Accompagnement" },
-              { icon: Zap, label: "Croissance rapide" },
-              { icon: Brain, label: "Stratégie digitale" },
-              { icon: Code, label: "Développement" },
+              { icon: Shield, label: "Sécurité" },
+              { icon: Zap, label: "Performance" },
+              { icon: Brain, label: "Innovation" },
+              { icon: Code, label: "Qualité" },
             ].map((item, index) => {
               const IconComponent = item.icon;
               return (
