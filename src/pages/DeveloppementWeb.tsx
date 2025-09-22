@@ -85,12 +85,16 @@ const DeveloppementWeb = () => {
                 Créons ensemble des solutions digitales performantes qui propulsent votre entreprise vers le succès.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-white text-primary hover:bg-white/90">
-                  <Code2 className="w-5 h-5 mr-2" />
-                  Commencer un projet
+                <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90">
+                  <Link to="/contact">
+                    <Code2 className="w-5 h-5 mr-2" />
+                    Commencer un projet
+                  </Link>
                 </Button>
-                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary">
-                  Voir nos réalisations
+                <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary">
+                  <Link to="/contact">
+                    Voir nos réalisations
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -140,32 +144,62 @@ const DeveloppementWeb = () => {
         </div>
       </section>
 
-      {/* Technologies Section */}
+      {/* Expertise Section */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-6">
           <ScrollAnimationWrapper animation="fade-in">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-                Technologies Maîtrisées
+                Notre Expertise
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Nous utilisons les technologies les plus performantes et récentes du marché
+                Spécialisés en WordPress, nous maîtrisons également le développement sur mesure pour répondre à tous vos besoins
               </p>
             </div>
           </ScrollAnimationWrapper>
 
           <ScrollAnimationWrapper animation="slide-up" delay="300ms">
-            <div className="flex flex-wrap justify-center gap-6">
-              {technologies.map((tech, index) => (
-                <div
-                  key={index}
-                  className="bg-card px-6 py-4 rounded-full shadow-md hover:shadow-lg transition-all duration-300 border border-border/50 hover:border-primary/20"
-                >
-                  <span className={`font-semibold ${tech.color}`}>
-                    {tech.name}
-                  </span>
-                </div>
-              ))}
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-card p-8 rounded-2xl shadow-lg border border-border/50">
+                <h3 className="text-2xl font-bold text-primary mb-4">WordPress Expert</h3>
+                <p className="text-muted-foreground mb-4">
+                  Notre spécialité principale avec plus de 10 ans d'expérience dans la création de sites WordPress performants et sécurisés.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-center text-sm text-muted-foreground">
+                    <Zap className="w-4 h-4 text-accent mr-2" />
+                    Sites vitrine et e-commerce
+                  </li>
+                  <li className="flex items-center text-sm text-muted-foreground">
+                    <Zap className="w-4 h-4 text-accent mr-2" />
+                    Thèmes sur mesure
+                  </li>
+                  <li className="flex items-center text-sm text-muted-foreground">
+                    <Zap className="w-4 h-4 text-accent mr-2" />
+                    Extensions personnalisées
+                  </li>
+                </ul>
+              </div>
+              <div className="bg-card p-8 rounded-2xl shadow-lg border border-border/50">
+                <h3 className="text-2xl font-bold text-primary mb-4">Développement Sur Mesure</h3>
+                <p className="text-muted-foreground mb-4">
+                  Pour les projets nécessitant des solutions spécifiques, nous développons également des applications web personnalisées.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-center text-sm text-muted-foreground">
+                    <Zap className="w-4 h-4 text-accent mr-2" />
+                    Applications web complexes
+                  </li>
+                  <li className="flex items-center text-sm text-muted-foreground">
+                    <Zap className="w-4 h-4 text-accent mr-2" />
+                    API et intégrations
+                  </li>
+                  <li className="flex items-center text-sm text-muted-foreground">
+                    <Zap className="w-4 h-4 text-accent mr-2" />
+                    Solutions sur mesure
+                  </li>
+                </ul>
+              </div>
             </div>
           </ScrollAnimationWrapper>
         </div>
@@ -194,7 +228,7 @@ const DeveloppementWeb = () => {
                       {step.step}
                     </div>
                     {index < processSteps.length - 1 && (
-                      <div className="hidden lg:block absolute top-10 left-full w-full h-px bg-border -translate-x-1/2"></div>
+                      <div className="hidden lg:block absolute top-10 left-full w-8 h-px bg-border"></div>
                     )}
                   </div>
                   <h3 className="text-xl font-bold text-foreground mb-4">
@@ -229,8 +263,10 @@ const DeveloppementWeb = () => {
                     Obtenir un devis gratuit
                   </Link>
                 </Button>
-                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary">
-                  Voir nos projets
+                <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary">
+                  <Link to="/contact">
+                    Voir nos projets
+                  </Link>
                 </Button>
               </div>
             </div>

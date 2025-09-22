@@ -60,20 +60,20 @@ const Contact = () => {
     {
       icon: <Phone className="w-8 h-8" />,
       title: "Téléphone",
-      info: "+33 1 23 45 67 89",
-      description: "Du lundi au vendredi, 9h-18h"
+      info: "07 81 79 58 62",
+      description: "Du lundi au vendredi, 9h-19h"
     },
     {
       icon: <MapPin className="w-8 h-8" />,
       title: "Adresse",
-      info: "123 Rue de la Tech, 75001 Paris",
+      info: "867 Av. de la République, 59700 Marcq-en-Barœul",
       description: "Visitez-nous sur rendez-vous"
     },
     {
       icon: <Clock className="w-8 h-8" />,
       title: "Horaires",
-      info: "Lun-Ven: 9h-18h",
-      description: "Support 24h/7j pour les urgences"
+      info: "Lun-Ven: 9h-19h",
+      description: "Samedi - Dimanche: Fermé"
     }
   ];
 

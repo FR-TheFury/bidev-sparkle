@@ -139,9 +139,9 @@ const Services = () => {
 
   const stats = [
     { number: "100+", label: "Projets réalisés" },
-    { number: "50+", label: "Clients satisfaits" },
-    { number: "5 ans", label: "D'expérience" },
-    { number: "24h", label: "Temps de réponse" }
+    { number: "10 ans", label: "D'expérience" },
+    { number: "24h", label: "Temps de réponse" },
+    { number: "WordPress", label: "Spécialité" }
   ];
 
   return (
@@ -167,8 +167,10 @@ const Services = () => {
               <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
                 Découvrez notre gamme complète de services digitaux pour propulser votre entreprise vers le succès.
               </p>
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90">
-                Demander un devis gratuit
+              <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90">
+                <Link to="/contact">
+                  Demander un devis gratuit
+                </Link>
               </Button>
             </div>
           </ScrollAnimationWrapper>
@@ -332,8 +334,10 @@ const Services = () => {
                     Demander un devis gratuit
                   </Link>
                 </Button>
-                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary">
-                  Voir nos réalisations
+                <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary">
+                  <Link to="/contact">
+                    Voir nos réalisations
+                  </Link>
                 </Button>
               </div>
             </div>
