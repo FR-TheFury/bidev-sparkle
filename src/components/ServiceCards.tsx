@@ -75,17 +75,17 @@ const ServiceCards = () => {
                   <div className={`absolute top-0 right-0 w-24 h-24 sm:w-32 sm:h-32 bg-gradient-to-br ${service.color} opacity-5 rounded-full -translate-y-6 sm:-translate-y-8 translate-x-6 sm:translate-x-8 group-hover:scale-150 transition-transform duration-700`}></div>
                   
                   {/* Highlight Badge */}
-                  <div className="absolute top-4 sm:top-6 right-4 sm:right-6 bg-primary/10 text-primary text-xs font-semibold px-2 sm:px-3 py-1 rounded-full">
+                  <div className="absolute top-3 sm:top-4 md:top-6 right-3 sm:right-4 md:right-6 bg-primary/10 text-primary text-xs font-semibold px-2 sm:px-3 py-1 rounded-full z-10">
                     {service.highlight}
                   </div>
 
                   {/* Icon & Title */}
-                  <div className="flex items-start space-x-3 sm:space-x-4 mb-4 sm:mb-6 relative z-10">
+                  <div className="flex items-start space-x-3 sm:space-x-4 mb-4 sm:mb-6 relative z-10 pr-16 sm:pr-20">
                     <div className={`p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-gradient-to-r ${service.color} shadow-primary group-hover:scale-110 transition-all duration-300 group-hover:shadow-lg flex-shrink-0`}>
                       <IconComponent className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-1 sm:mb-2 group-hover:text-primary transition-colors duration-300">
+                      <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-1 sm:mb-2 group-hover:text-primary transition-colors duration-300 leading-tight">
                         {service.title}
                       </h3>
                       <div className="text-xs sm:text-sm text-primary font-medium">
