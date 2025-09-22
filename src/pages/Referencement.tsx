@@ -89,7 +89,7 @@ const Referencement = () => {
               <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
                 Propulsez votre visibilité en ligne et dominez les résultats de recherche avec nos stratégies SEO éprouvées.
               </p>
-              <div className="flex justify-center">
+              <div className="flex justify-start">
                 <Button size="lg" className="bg-white text-primary hover:bg-white/90">
                   <Search className="w-5 h-5 mr-2" />
                   Audit SEO gratuit

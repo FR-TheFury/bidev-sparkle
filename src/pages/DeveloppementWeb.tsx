@@ -84,7 +84,7 @@ const DeveloppementWeb = () => {
               <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
                 Créons ensemble des solutions digitales performantes qui propulsent votre entreprise vers le succès.
               </p>
-              <div className="flex justify-center">
+              <div className="flex justify-start">
                 <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90">
                   <Link to="/contact">
                     <Code2 className="w-5 h-5 mr-2" />
