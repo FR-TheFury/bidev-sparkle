@@ -102,10 +102,10 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className={`lg:hidden mt-3 sm:mt-4 pb-4 pt-4 transition-colors duration-300 ${
+          <div className={`lg:hidden mt-3 sm:mt-4 pb-4 pt-4 transition-colors duration-300 bg-popover/95 backdrop-blur-md rounded-lg mx-4 border border-border/50 shadow-lg ${
             isScrolled 
-              ? 'border-t border-gray-200' 
-              : 'border-t border-white/20'
+              ? 'border-gray-200/50' 
+              : 'border-white/20'
           }`}>
             <nav className="flex flex-col space-y-3 sm:space-y-4">
               {navItems.map((item) => (

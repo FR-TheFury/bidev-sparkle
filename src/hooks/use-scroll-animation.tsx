@@ -61,29 +61,34 @@ export const ScrollAnimationWrapper: React.FC<ScrollAnimationWrapperProps> = ({
 }) => {
   const { ref, isVisible } = useScrollAnimation();
 
+  // Détection mobile pour animations réduites
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  const reducedMotion = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   const getAnimationClasses = () => {
     const baseClasses = `transition-all ease-out opacity-0`;
     const visibleClasses = 'opacity-100';
     
+    // Animations réduites pour mobile et accessibility
     const animationStyles = {
       'fade-in': {
-        hidden: 'translate-y-8',
+        hidden: isMobile || reducedMotion ? 'translate-y-2' : 'translate-y-8',
         visible: 'translate-y-0'
       },
       'slide-up': {
-        hidden: 'translate-y-16',
+        hidden: isMobile || reducedMotion ? 'translate-y-4' : 'translate-y-16',
         visible: 'translate-y-0'
       },
       'scale-in': {
-        hidden: 'scale-95',
+        hidden: isMobile || reducedMotion ? 'scale-98' : 'scale-95',
         visible: 'scale-100'
       },
       'slide-left': {
-        hidden: 'translate-x-16',
+        hidden: isMobile || reducedMotion ? 'translate-x-4' : 'translate-x-16',
         visible: 'translate-x-0'
       },
       'slide-right': {
-        hidden: '-translate-x-16',  
+        hidden: isMobile || reducedMotion ? '-translate-x-4' : '-translate-x-16',  
         visible: 'translate-x-0'
       }
     };
@@ -93,13 +98,17 @@ export const ScrollAnimationWrapper: React.FC<ScrollAnimationWrapperProps> = ({
     return `${baseClasses} ${isVisible ? `${visibleClasses} ${currentAnimation.visible}` : currentAnimation.hidden}`;
   };
 
+  // Durée adaptée pour mobile
+  const adaptedDuration = isMobile || reducedMotion ? '300ms' : duration;
+  const adaptedDelay = isMobile || reducedMotion ? '0ms' : delay;
+
   return (
     <div
       ref={ref}
       className={`${getAnimationClasses()} ${className}`}
       style={{
-        transitionDelay: delay,
-        transitionDuration: duration
+        transitionDelay: adaptedDelay,
+        transitionDuration: adaptedDuration
       }}
     >
       {children}
