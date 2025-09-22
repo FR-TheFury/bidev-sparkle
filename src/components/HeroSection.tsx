@@ -32,9 +32,9 @@ const HeroSection = () => {
           
           {/* Subtitle */}
           <ScrollAnimationWrapper animation="fade-in" delay="300ms">
-            <p className="text-xl md:text-2xl text-white mb-8 max-w-2xl mx-auto leading-relaxed drop-shadow-lg">
-              Notre promesse : "vous accompagner jusqu'à l'atteinte de vos objectifs!"
-            </p>
+             <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto leading-relaxed drop-shadow-lg">
+               Notre promesse : "vous accompagner vers le succès digital !"
+             </p>
           </ScrollAnimationWrapper>
           
           {/* CTA Buttons */}
