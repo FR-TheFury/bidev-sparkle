@@ -33,22 +33,22 @@ const Header = () => {
         : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between min-h-[60px] sm:min-h-[80px]">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
             <img 
               src={logoBidev} 
               alt="BiDev Logo" 
               className={`w-auto animate-fade-in transition-all duration-300 ${
                 isScrolled 
-                  ? 'h-12 sm:h-16' 
-                  : 'h-20 sm:h-28 lg:h-36'
+                  ? 'h-10 sm:h-12 md:h-16' 
+                  : 'h-16 sm:h-20 md:h-28 lg:h-36'
               }`}
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+          <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8 flex-1 justify-center max-w-2xl mx-8">
             {navItems.map((item) => {
               const isActive = location.pathname === item.href;
               
@@ -72,7 +72,7 @@ const Header = () => {
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-3 xl:space-x-4">
+          <div className="hidden lg:flex items-center space-x-3 xl:space-x-4 flex-shrink-0">
             <Link 
               to="/contact" 
               className={`px-3 xl:px-4 py-2 rounded-lg border-2 font-medium transition-all duration-300 text-sm xl:text-base ${
@@ -91,11 +91,12 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className={`lg:hidden p-2 transition-colors duration-300 ${
-              isScrolled ? 'text-gray-800' : 'text-white'
+            className={`lg:hidden p-2 rounded-lg transition-colors duration-300 flex-shrink-0 ${
+              isScrolled ? 'text-gray-800 hover:bg-gray-100' : 'text-white hover:bg-white/10'
             }`}
+            aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
 
