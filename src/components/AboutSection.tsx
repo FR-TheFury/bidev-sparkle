@@ -30,16 +30,16 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-br from-background to-secondary/20">
-      <div className="container mx-auto px-6">
+    <section id="about" className="py-16 sm:py-20 bg-gradient-to-br from-background to-secondary/20">
+      <div className="container mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <ScrollAnimationWrapper animation="fade-in">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
               Notre
               <span className="block gradient-text-accent">Savoir Faire</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed px-4 sm:px-0">
               En s'appuyant sur 10 années d'expérience dans l'univers du digital, BI DEVELOPPEMENT, 
               agence webmarketing à Marcq-en-Baroeul près de Lille, vous offre de multiples services 
               ainsi qu'un accompagnement complet afin de permettre à votre entreprise une croissance online.
@@ -48,26 +48,26 @@ const AboutSection = () => {
         </ScrollAnimationWrapper>
 
         {/* Strengths Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-12 sm:mb-16">
           {strengths.map((strength, index) => (
             <ScrollAnimationWrapper key={index} animation="fade-in" delay={`${index * 200}ms`}>
-              <div className="group bg-card border border-border rounded-xl p-6 hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 h-full">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                  <strength.icon className="h-6 w-6 text-primary" />
+              <div className="group bg-card border border-border rounded-xl p-4 sm:p-6 hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 h-full">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-primary/20 transition-colors">
+                  <strength.icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                 </div>
                 
-                <h3 className="text-xl font-semibold mb-3 text-foreground">
+                <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-foreground">
                   {strength.title}
                 </h3>
                 
-                <p className="text-muted-foreground mb-4 leading-relaxed">
+                <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4 leading-relaxed">
                   {strength.description}
                 </p>
                 
-                <ul className="space-y-2">
+                <ul className="space-y-1.5 sm:space-y-2">
                   {strength.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-muted-foreground">
-                      <CheckCircle className="h-4 w-4 text-primary mr-2 flex-shrink-0" />
+                    <li key={idx} className="flex items-center text-xs sm:text-sm text-muted-foreground">
+                      <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-primary mr-2 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -79,19 +79,19 @@ const AboutSection = () => {
 
         {/* Stats Section */}
         <ScrollAnimationWrapper animation="slide-up" delay="200ms">
-          <div className="bg-card rounded-2xl p-8 border border-border">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div className="bg-card rounded-2xl p-6 sm:p-8 border border-border">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 text-center">
               <div>
-                <div className="text-4xl font-bold text-primary mb-2">&lt;2s</div>
-                <div className="text-muted-foreground">Temps de chargement</div>
+                <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">&lt;2s</div>
+                <div className="text-sm sm:text-base text-muted-foreground">Temps de chargement</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-primary mb-2">100+</div>
-                <div className="text-muted-foreground">Projets livrés</div>
+                <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">100+</div>
+                <div className="text-sm sm:text-base text-muted-foreground">Projets livrés</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-primary mb-2">100%</div>
-                <div className="text-muted-foreground">Clients satisfaits</div>
+                <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">100%</div>
+                <div className="text-sm sm:text-base text-muted-foreground">Clients satisfaits</div>
               </div>
             </div>
           </div>

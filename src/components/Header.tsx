@@ -32,7 +32,7 @@ const Header = () => {
         ? 'bg-white/95 backdrop-blur-sm shadow-lg' 
         : 'bg-transparent'
     }`}>
-      <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
@@ -40,13 +40,15 @@ const Header = () => {
               src={logoBidev} 
               alt="BiDev Logo" 
               className={`w-auto animate-fade-in transition-all duration-300 ${
-                isScrolled ? 'h-16' : 'h-36'
+                isScrolled 
+                  ? 'h-12 sm:h-16' 
+                  : 'h-20 sm:h-28 lg:h-36'
               }`}
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             {navItems.map((item) => {
               const isActive = location.pathname === item.href;
               
@@ -70,10 +72,10 @@ const Header = () => {
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-3 xl:space-x-4">
             <Link 
               to="/contact" 
-              className={`px-4 py-2 rounded-lg border-2 font-medium transition-all duration-300 ${
+              className={`px-3 xl:px-4 py-2 rounded-lg border-2 font-medium transition-all duration-300 text-sm xl:text-base ${
                 isScrolled 
                   ? 'border-primary text-primary hover:bg-primary hover:text-white' 
                   : 'border-white text-white hover:bg-white hover:text-primary'
@@ -81,7 +83,7 @@ const Header = () => {
             >
               Devis gratuit
             </Link>
-            <Link to="/contact" className="btn-hero">
+            <Link to="/contact" className="btn-hero text-sm xl:text-base px-3 xl:px-4">
               Commencer
             </Link>
           </div>
@@ -99,17 +101,17 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className={`lg:hidden mt-4 pb-4 pt-4 transition-colors duration-300 ${
+          <div className={`lg:hidden mt-3 sm:mt-4 pb-4 pt-4 transition-colors duration-300 ${
             isScrolled 
               ? 'border-t border-gray-200' 
               : 'border-t border-white/20'
           }`}>
-            <nav className="flex flex-col space-y-4">
+            <nav className="flex flex-col space-y-3 sm:space-y-4">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`font-medium transition-colors duration-300 ${
+                  className={`font-medium transition-colors duration-300 text-sm sm:text-base ${
                     isScrolled 
                       ? 'text-gray-800 hover:text-primary' 
                       : 'text-white/90 hover:text-white'
@@ -119,10 +121,10 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
-              <div className="flex flex-col space-y-3 pt-4">
+              <div className="flex flex-col space-y-3 pt-3 sm:pt-4">
                 <Link 
                   to="/contact" 
-                  className={`px-4 py-2 rounded-lg border-2 font-medium transition-all duration-300 text-center ${
+                  className={`px-4 py-2.5 sm:py-3 rounded-lg border-2 font-medium transition-all duration-300 text-center text-sm sm:text-base ${
                     isScrolled 
                       ? 'border-primary text-primary hover:bg-primary hover:text-white' 
                       : 'border-white text-white hover:bg-white hover:text-primary'
@@ -131,7 +133,7 @@ const Header = () => {
                 >
                   Devis gratuit
                 </Link>
-                <Link to="/contact" className="btn-hero" onClick={() => setIsMenuOpen(false)}>
+                <Link to="/contact" className="btn-hero text-sm sm:text-base" onClick={() => setIsMenuOpen(false)}>
                   Commencer
                 </Link>
               </div>

@@ -42,16 +42,16 @@ const Gallery = () => {
   ];
 
   return (
-    <section id="gallery" className="py-20 bg-gradient-to-br from-secondary/10 to-background">
-      <div className="container mx-auto px-6">
+    <section id="gallery" className="py-16 sm:py-20 bg-gradient-to-br from-secondary/10 to-background">
+      <div className="container mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <ScrollAnimationWrapper animation="fade-in">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
               Nos
               <span className="block gradient-text-accent">Réalisations</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
               Découvrez quelques-uns de nos projets qui illustrent notre expertise 
               et notre engagement envers l'excellence
             </p>
@@ -59,7 +59,7 @@ const Gallery = () => {
         </ScrollAnimationWrapper>
 
         {/* Gallery Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {projects.map((project, index) => (
             <ScrollAnimationWrapper key={project.id} animation="fade-in" delay={`${index * 150}ms`}>
               <div className="group relative overflow-hidden rounded-xl bg-card border border-border hover:shadow-elegant transition-all duration-300 hover:-translate-y-2">
@@ -73,16 +73,16 @@ const Gallery = () => {
                 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                  <div className="text-sm text-white/80 mb-2">{project.category}</div>
-                  <h3 className="text-xl font-semibold">{project.title}</h3>
+                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <div className="text-xs sm:text-sm text-white/80 mb-1 sm:mb-2">{project.category}</div>
+                  <h3 className="text-lg sm:text-xl font-semibold">{project.title}</h3>
                 </div>
 
                 {/* Overlay for non-hover state */}
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent group-hover:opacity-0 transition-opacity duration-300">
+                <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 bg-gradient-to-t from-black/60 to-transparent group-hover:opacity-0 transition-opacity duration-300">
                   <div className="text-white">
                     <div className="text-xs text-white/80 mb-1">{project.category}</div>
-                    <h3 className="text-lg font-semibold">{project.title}</h3>
+                    <h3 className="text-sm sm:text-base lg:text-lg font-semibold">{project.title}</h3>
                   </div>
                 </div>
               </div>
