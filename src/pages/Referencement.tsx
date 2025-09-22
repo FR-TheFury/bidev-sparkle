@@ -274,15 +274,12 @@ const Referencement = () => {
               <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
                 Ne laissez pas vos concurrents prendre l'avantage. Commencez votre stratégie SEO maintenant.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex justify-center">
                 <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90">
                   <Link to="/contact">
                     <Target className="w-5 h-5 mr-2" />
                     Demander un audit gratuit
                   </Link>
-                </Button>
-                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/20 hover:text-white">
-                  Voir nos cas clients
                 </Button>
               </div>
             </div>
