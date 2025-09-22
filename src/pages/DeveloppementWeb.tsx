@@ -263,7 +263,7 @@ const DeveloppementWeb = () => {
                     Obtenir un devis gratuit
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary">
+                <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/20 hover:text-white">
                   <Link to="/contact">
                     Voir nos projets
                   </Link>

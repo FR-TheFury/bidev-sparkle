@@ -246,7 +246,7 @@ const Referencement = () => {
                       {step.step}
                     </div>
                     {index < process.length - 1 && (
-                      <div className="hidden lg:block absolute top-10 left-full w-full h-px bg-border -translate-x-1/2"></div>
+                      <div className="hidden lg:block absolute top-10 left-full w-8 h-px bg-border"></div>
                     )}
                   </div>
                   <h3 className="text-xl font-bold text-foreground mb-4">
@@ -281,7 +281,7 @@ const Referencement = () => {
                     Demander un audit gratuit
                   </Link>
                 </Button>
-                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary">
+                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/20 hover:text-white">
                   Voir nos cas clients
                 </Button>
               </div>
