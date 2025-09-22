@@ -63,8 +63,10 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
-            <button className={`transition-all duration-300 ${
-              isScrolled ? 'btn-outline text-primary border-primary hover:bg-primary hover:text-white' : 'btn-outline-hero'
+            <button className={`px-4 py-2 rounded-lg border-2 font-medium transition-all duration-300 ${
+              isScrolled 
+                ? 'border-primary text-primary hover:bg-primary hover:text-white' 
+                : 'border-white text-white hover:bg-white hover:text-primary'
             }`}>
               Devis gratuit
             </button>
@@ -107,8 +109,10 @@ const Header = () => {
                 </a>
               ))}
               <div className="flex flex-col space-y-3 pt-4">
-                <button className={`transition-all duration-300 ${
-                  isScrolled ? 'btn-outline text-primary border-primary hover:bg-primary hover:text-white' : 'btn-outline-hero'
+                <button className={`px-4 py-2 rounded-lg border-2 font-medium transition-all duration-300 ${
+                  isScrolled 
+                    ? 'border-primary text-primary hover:bg-primary hover:text-white' 
+                    : 'border-white text-white hover:bg-white hover:text-primary'
                 }`}>
                   Devis gratuit
                 </button>

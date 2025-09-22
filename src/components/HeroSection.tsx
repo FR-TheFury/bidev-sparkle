@@ -1,5 +1,6 @@
 import { ArrowRight, Play } from 'lucide-react';
 import heroBackground from '@/assets/hero-background-neutral.jpg';
+import { ScrollAnimationWrapper } from '@/hooks/use-scroll-animation';
 
 const HeroSection = () => {
   return (
@@ -20,50 +21,58 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="max-w-4xl mx-auto">
           {/* Main Title */}
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in">
-            Solutions Web
-            <span className="block gradient-text-accent">
-              Innovantes
-            </span>
-          </h1>
+          <ScrollAnimationWrapper animation="fade-in" delay="100ms">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Solutions Web
+              <span className="block gradient-text-accent">
+                Innovantes
+              </span>
+            </h1>
+          </ScrollAnimationWrapper>
           
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed animate-slide-up">
-            Développement web moderne et intelligence d'affaires pour propulser votre entreprise vers le futur numérique
-          </p>
+          <ScrollAnimationWrapper animation="fade-in" delay="300ms">
+            <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
+              Développement web moderne et intelligence d'affaires pour propulser votre entreprise vers le futur numérique
+            </p>
+          </ScrollAnimationWrapper>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12 animate-slide-up">
-            <button className="btn-hero group flex items-center">
-              Démarrer votre projet
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-            
-            <button className="btn-outline-hero group flex items-center">
-              <Play className="mr-2 h-5 w-5" />
-              Voir nos réalisations
-            </button>
-          </div>
+          <ScrollAnimationWrapper animation="fade-in" delay="500ms">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
+              <button className="btn-hero group flex items-center">
+                Démarrer votre projet
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </button>
+              
+              <button className="btn-outline-hero group flex items-center">
+                <Play className="mr-2 h-5 w-5" />
+                Voir nos réalisations
+              </button>
+            </div>
+          </ScrollAnimationWrapper>
           
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto animate-fade-in">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">50+</div>
-              <div className="text-white/70 text-sm md:text-base">Projets réalisés</div>
+          <ScrollAnimationWrapper animation="fade-in" delay="700ms">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">50+</div>
+                <div className="text-white/70 text-sm md:text-base">Projets réalisés</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">5+</div>
+                <div className="text-white/70 text-sm md:text-base">Années d'expérience</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">30+</div>
+                <div className="text-white/70 text-sm md:text-base">Clients satisfaits</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">24/7</div>
+                <div className="text-white/70 text-sm md:text-base">Support technique</div>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">5+</div>
-              <div className="text-white/70 text-sm md:text-base">Années d'expérience</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">30+</div>
-              <div className="text-white/70 text-sm md:text-base">Clients satisfaits</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">24/7</div>
-              <div className="text-white/70 text-sm md:text-base">Support technique</div>
-            </div>
-          </div>
+          </ScrollAnimationWrapper>
         </div>
       </div>
       
