@@ -36,13 +36,13 @@ const Footer = () => {
               <div className="flex items-start">
                 <MapPin className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
                 <div className="text-sm text-muted-foreground">
-                  <p>Marcq-en-Baroeul</p>
-                  <p>Près de Lille</p>
+                  <p>867 Av. de la République</p>
+                  <p>59700 Marcq-en-Barœul</p>
                 </div>
               </div>
               <div className="flex items-center">
                 <Phone className="h-5 w-5 text-primary mr-3 flex-shrink-0" />
-                <span className="text-sm text-muted-foreground">03 XX XX XX XX</span>
+                <span className="text-sm text-muted-foreground">07 81 79 58 62</span>
               </div>
               <div className="flex items-center">
                 <Mail className="h-5 w-5 text-primary mr-3 flex-shrink-0" />
@@ -51,8 +51,8 @@ const Footer = () => {
               <div className="flex items-start">
                 <Clock className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
                 <div className="text-sm text-muted-foreground">
-                  <p>Lun - Ven: 9h - 18h</p>
-                  <p>Support 24/7</p>
+                  <p>Lun - Ven: 9h - 19h</p>
+                  <p>Samedi - Dimanche: Fermé</p>
                 </div>
               </div>
             </div>

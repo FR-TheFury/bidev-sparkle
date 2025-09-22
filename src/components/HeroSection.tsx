@@ -54,7 +54,7 @@ const HeroSection = () => {
           
           {/* Stats */}
           <ScrollAnimationWrapper animation="fade-in" delay="700ms">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
+            <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-white mb-2">10+</div>
                 <div className="text-white/70 text-sm md:text-base">Années d'expérience</div>
@@ -66,10 +66,6 @@ const HeroSection = () => {
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-white mb-2">63%</div>
                 <div className="text-white/70 text-sm md:text-base">Partage vidéo</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">24/7</div>
-                <div className="text-white/70 text-sm md:text-base">Accompagnement</div>
               </div>
             </div>
           </ScrollAnimationWrapper>

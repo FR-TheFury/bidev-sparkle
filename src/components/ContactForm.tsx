@@ -79,7 +79,7 @@ const ContactForm = () => {
                     </div>
                     <div>
                       <div className="font-semibold text-foreground">Email</div>
-                      <div className="text-muted-foreground">contact@bidev-solutions.com</div>
+                      <div className="text-muted-foreground">contact@bidev.fr</div>
                     </div>
                   </div>
 
@@ -89,7 +89,7 @@ const ContactForm = () => {
                     </div>
                     <div>
                       <div className="font-semibold text-foreground">Téléphone</div>
-                      <div className="text-muted-foreground">+33 1 23 45 67 89</div>
+                      <div className="text-muted-foreground">07 81 79 58 62</div>
                     </div>
                   </div>
 
@@ -99,17 +99,17 @@ const ContactForm = () => {
                     </div>
                     <div>
                       <div className="font-semibold text-foreground">Adresse</div>
-                      <div className="text-muted-foreground">Paris, France</div>
+                      <div className="text-muted-foreground">867 Av. de la République, 59700 Marcq-en-Barœul</div>
                     </div>
                   </div>
                 </div>
 
                 <div className="bg-card border border-border rounded-xl p-6">
-                  <h4 className="font-semibold text-foreground mb-3">Temps de réponse</h4>
-                  <p className="text-muted-foreground text-sm">
-                    Nous nous engageons à vous répondre dans les 24h ouvrées. 
-                    Pour les urgences, n'hésitez pas à nous appeler directement.
-                  </p>
+                  <h4 className="font-semibold text-foreground mb-3">Horaires</h4>
+                  <div className="text-muted-foreground text-sm space-y-1">
+                    <p>Lundi - Vendredi: 9h - 19h</p>
+                    <p>Samedi - Dimanche: Fermé</p>
+                  </div>
                 </div>
               </div>
             </ScrollAnimationWrapper>

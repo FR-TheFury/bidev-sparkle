@@ -7,7 +7,7 @@ const AboutSection = () => {
       icon: Shield,
       title: "Sécurité Avancée",
       description: "Protection maximale de vos données avec les dernières technologies de sécurité",
-      features: ["Chiffrement SSL", "Sauvegardes automatiques", "Monitoring 24/7"]
+      features: ["Chiffrement SSL", "Sauvegardes automatiques", "Monitoring continu"]
     },
     {
       icon: Zap,
@@ -17,9 +17,9 @@ const AboutSection = () => {
     },
     {
       icon: Users,
-      title: "Support Expert",
+      title: "Accompagnement Expert",
       description: "Équipe dédiée d'experts disponible pour vous accompagner",
-      features: ["Support 24/7", "Formation incluse", "Maintenance proactive"]
+      features: ["Proximité client", "Formation incluse", "Maintenance proactive"]
     },
     {
       icon: Award,
