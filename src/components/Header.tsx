@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Code, Smartphone } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import logoBidev from '@/assets/logo-bidev.png';
 
 const Header = () => {
@@ -121,38 +121,6 @@ const Header = () => {
                 </button>
               </div>
             </nav>
-          </div>
-        )}
-        
-        {/* Services Encarts - Only show when not scrolled */}
-        {!isScrolled && (
-          <div className="mt-8 grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-            <div className="flex items-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
-              <div className="p-2 rounded-lg bg-white/20 mr-3">
-                <Code className="h-5 w-5 text-white" />
-              </div>
-              <div>
-                <h3 className="text-sm font-semibold text-white">
-                  Développement Web
-                </h3>
-                <p className="text-xs text-white/80">
-                  Sites internet modernes
-                </p>
-              </div>
-            </div>
-            <div className="flex items-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
-              <div className="p-2 rounded-lg bg-white/20 mr-3">
-                <Smartphone className="h-5 w-5 text-white" />
-              </div>
-              <div>
-                <h3 className="text-sm font-semibold text-white">
-                  Développement Application
-                </h3>
-                <p className="text-xs text-white/80">
-                  Applications sur mesure
-                </p>
-              </div>
-            </div>
           </div>
         )}
       </div>
