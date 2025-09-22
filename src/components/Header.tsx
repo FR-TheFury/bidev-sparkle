@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import logoBidev from '@/assets/logo-bidev.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,11 +19,11 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { name: 'Accueil', href: '#home' },
-    { name: 'Services', href: '#services' },
-    { name: 'À propos', href: '#about' },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Accueil', href: '/' },
+    { name: 'Services', href: '/services' },
+    { name: 'Développement', href: '/developpement-web' },
+    { name: 'Référencement', href: '/referencement' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -33,7 +35,7 @@ const Header = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center space-x-3">
             <img 
               src={logoBidev} 
               alt="BiDev Logo" 
@@ -41,38 +43,47 @@ const Header = () => {
                 isScrolled ? 'h-16' : 'h-36'
               }`}
             />
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className={`font-medium transition-all duration-300 hover:scale-105 relative group ${
-                  isScrolled 
-                    ? 'text-gray-800 hover:text-primary' 
-                    : 'text-white/90 hover:text-white'
-                }`}
-              >
-                {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
-              </a>
-            ))}
+            {navItems.map((item) => {
+              const isActive = location.pathname === item.href;
+              
+              return (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={`font-medium transition-all duration-300 hover:scale-105 relative group ${
+                    isScrolled 
+                      ? 'text-gray-800 hover:text-primary' 
+                      : 'text-white/90 hover:text-white'
+                  } ${isActive ? 'text-primary' : ''}`}
+                >
+                  {item.name}
+                  <span className={`absolute -bottom-1 left-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full ${
+                    isActive ? 'w-full' : 'w-0'
+                  }`}></span>
+                </Link>
+              );
+            })}
           </nav>
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
-            <button className={`px-4 py-2 rounded-lg border-2 font-medium transition-all duration-300 ${
-              isScrolled 
-                ? 'border-primary text-primary hover:bg-primary hover:text-white' 
-                : 'border-white text-white hover:bg-white hover:text-primary'
-            }`}>
+            <Link 
+              to="/contact" 
+              className={`px-4 py-2 rounded-lg border-2 font-medium transition-all duration-300 ${
+                isScrolled 
+                  ? 'border-primary text-primary hover:bg-primary hover:text-white' 
+                  : 'border-white text-white hover:bg-white hover:text-primary'
+              }`}
+            >
               Devis gratuit
-            </button>
-            <button className="btn-hero">
+            </Link>
+            <Link to="/contact" className="btn-hero">
               Commencer
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -95,9 +106,9 @@ const Header = () => {
           }`}>
             <nav className="flex flex-col space-y-4">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
+                  to={item.href}
                   className={`font-medium transition-colors duration-300 ${
                     isScrolled 
                       ? 'text-gray-800 hover:text-primary' 
@@ -106,19 +117,23 @@ const Header = () => {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
               <div className="flex flex-col space-y-3 pt-4">
-                <button className={`px-4 py-2 rounded-lg border-2 font-medium transition-all duration-300 ${
-                  isScrolled 
-                    ? 'border-primary text-primary hover:bg-primary hover:text-white' 
-                    : 'border-white text-white hover:bg-white hover:text-primary'
-                }`}>
+                <Link 
+                  to="/contact" 
+                  className={`px-4 py-2 rounded-lg border-2 font-medium transition-all duration-300 text-center ${
+                    isScrolled 
+                      ? 'border-primary text-primary hover:bg-primary hover:text-white' 
+                      : 'border-white text-white hover:bg-white hover:text-primary'
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
                   Devis gratuit
-                </button>
-                <button className="btn-hero">
+                </Link>
+                <Link to="/contact" className="btn-hero" onClick={() => setIsMenuOpen(false)}>
                   Commencer
-                </button>
+                </Link>
               </div>
             </nav>
           </div>
