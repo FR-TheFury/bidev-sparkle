@@ -32,8 +32,8 @@ const HeroSection = () => {
           
           {/* Subtitle */}
           <ScrollAnimationWrapper animation="fade-in" delay="300ms">
-             <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto leading-relaxed drop-shadow-lg">
-               Notre promesse : "vous accompagner vers le succès digital !"
+             <p className="text-xl md:text-2xl text-white mb-8 max-w-4xl mx-auto leading-relaxed drop-shadow-lg">
+               Notre promesse : "vous accompagner jusqu'à l'atteinte de vos objectifs!"
              </p>
           </ScrollAnimationWrapper>
           
