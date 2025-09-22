@@ -1,9 +1,20 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import logoBidev from '@/assets/logo-bidev.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navItems = [
     { name: 'Accueil', href: '#home' },
@@ -14,7 +25,11 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-white/95 backdrop-blur-sm shadow-lg' 
+        : 'bg-transparent'
+    }`}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -22,7 +37,9 @@ const Header = () => {
             <img 
               src={logoBidev} 
               alt="BiDev Logo" 
-              className="h-36 w-auto animate-fade-in"
+              className={`w-auto animate-fade-in transition-all duration-300 ${
+                isScrolled ? 'h-16' : 'h-36'
+              }`}
             />
           </div>
 
@@ -32,7 +49,11 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-white/90 hover:text-white font-medium transition-all duration-300 hover:scale-105 relative group"
+                className={`font-medium transition-all duration-300 hover:scale-105 relative group ${
+                  isScrolled 
+                    ? 'text-gray-800 hover:text-primary' 
+                    : 'text-white/90 hover:text-white'
+                }`}
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
@@ -42,7 +63,9 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
-            <button className="btn-outline-hero">
+            <button className={`transition-all duration-300 ${
+              isScrolled ? 'btn-outline text-primary border-primary hover:bg-primary hover:text-white' : 'btn-outline-hero'
+            }`}>
               Devis gratuit
             </button>
             <button className="btn-hero">
@@ -53,7 +76,9 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden text-white p-2"
+            className={`lg:hidden p-2 transition-colors duration-300 ${
+              isScrolled ? 'text-gray-800' : 'text-white'
+            }`}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -61,20 +86,30 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t border-white/20 pt-4">
+          <div className={`lg:hidden mt-4 pb-4 pt-4 transition-colors duration-300 ${
+            isScrolled 
+              ? 'border-t border-gray-200' 
+              : 'border-t border-white/20'
+          }`}>
             <nav className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-white/90 hover:text-white font-medium transition-colors duration-300"
+                  className={`font-medium transition-colors duration-300 ${
+                    isScrolled 
+                      ? 'text-gray-800 hover:text-primary' 
+                      : 'text-white/90 hover:text-white'
+                  }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </a>
               ))}
               <div className="flex flex-col space-y-3 pt-4">
-                <button className="btn-outline-hero">
+                <button className={`transition-all duration-300 ${
+                  isScrolled ? 'btn-outline text-primary border-primary hover:bg-primary hover:text-white' : 'btn-outline-hero'
+                }`}>
                   Devis gratuit
                 </button>
                 <button className="btn-hero">
