@@ -86,7 +86,7 @@ const AboutSection = () => {
                 <div className="text-muted-foreground">Temps de chargement</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-primary mb-2">50+</div>
+                <div className="text-4xl font-bold text-primary mb-2">100+</div>
                 <div className="text-muted-foreground">Projets livrés</div>
               </div>
               <div>

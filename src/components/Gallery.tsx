@@ -25,7 +25,7 @@ const Gallery = () => {
       id: 4,
       title: "Référencement SEO",
       category: "Marketing Digital",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop"
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop"
     },
     {
       id: 5,
