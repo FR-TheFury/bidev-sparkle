@@ -22,7 +22,7 @@ const Header = () => {
             <img 
               src={logoBidev} 
               alt="BiDev Logo" 
-              className="h-12 w-auto animate-fade-in"
+              className="h-36 w-auto animate-fade-in"
             />
           </div>
 
