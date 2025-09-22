@@ -6,7 +6,7 @@ const ServiceCards = () => {
     {
       icon: Code,
       title: "Développement Web",
-      description: "Créez votre présence en ligne avec des sites web modernes, performants et sur mesure. De la vitrine au e-commerce complexe.",
+      description: "Sites web modernes, performants et sur mesure pour votre présence en ligne.",
       features: ["Sites vitrines", "E-commerce", "Applications web", "Sites responsives"],
       color: "from-blue-500 via-purple-600 to-pink-500",
       highlight: "Sur mesure",

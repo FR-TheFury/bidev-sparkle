@@ -17,15 +17,15 @@ const Gallery = () => {
     },
     {
       id: 3,
-      title: "Identité Visuelle",
-      category: "Design Graphique",
-      image: "https://images.unsplash.com/photo-1558655146-364adbe5d634?w=500&h=300&fit=crop"
+      title: "Site Responsive",
+      category: "Web Design",
+      image: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=500&h=300&fit=crop"
     },
     {
       id: 4,
-      title: "Motion Design",
-      category: "Animation",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop"
+      title: "Référencement SEO",
+      category: "Marketing Digital",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop"
     },
     {
       id: 5,

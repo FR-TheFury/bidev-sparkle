@@ -80,11 +80,7 @@ const AboutSection = () => {
         {/* Stats Section */}
         <ScrollAnimationWrapper animation="slide-up" delay="200ms">
           <div className="bg-card rounded-2xl p-8 border border-border">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              <div>
-                <div className="text-4xl font-bold text-primary mb-2">99.9%</div>
-                <div className="text-muted-foreground">Disponibilité</div>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
                 <div className="text-4xl font-bold text-primary mb-2">&lt;2s</div>
                 <div className="text-muted-foreground">Temps de chargement</div>
