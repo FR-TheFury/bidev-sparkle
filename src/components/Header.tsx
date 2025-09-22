@@ -112,23 +112,23 @@ const Header = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`font-medium transition-colors duration-300 text-sm sm:text-base ${
+                  className={`font-medium transition-colors duration-300 text-sm sm:text-base px-4 py-2 rounded-lg ${
                     isScrolled 
-                      ? 'text-gray-800 hover:text-primary' 
-                      : 'text-white/90 hover:text-white'
+                      ? 'text-foreground hover:text-primary hover:bg-muted/50' 
+                      : 'text-foreground hover:text-primary hover:bg-muted/50'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
-              <div className="flex flex-col space-y-3 pt-3 sm:pt-4">
+              <div className="flex flex-col space-y-3 pt-3 sm:pt-4 px-4">
                 <Link 
                   to="/contact" 
                   className={`px-4 py-2.5 sm:py-3 rounded-lg border-2 font-medium transition-all duration-300 text-center text-sm sm:text-base ${
                     isScrolled 
                       ? 'border-primary text-primary hover:bg-primary hover:text-white' 
-                      : 'border-white text-white hover:bg-white hover:text-primary'
+                      : 'border-primary text-primary hover:bg-primary hover:text-white'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
