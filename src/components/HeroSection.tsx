@@ -34,12 +34,12 @@ const HeroSection = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12 animate-slide-up">
-            <button className="btn-hero group">
+            <button className="btn-hero group flex items-center">
               Démarrer votre projet
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </button>
             
-            <button className="btn-outline-hero group">
+            <button className="btn-outline-hero group flex items-center">
               <Play className="mr-2 h-5 w-5" />
               Voir nos réalisations
             </button>
