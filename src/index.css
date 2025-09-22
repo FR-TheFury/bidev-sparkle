@@ -118,8 +118,21 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html, body, #root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   body {
     @apply bg-background text-foreground;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  img, video, svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
   }
 }
 
