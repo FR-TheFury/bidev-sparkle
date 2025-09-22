@@ -1,5 +1,5 @@
 import { ArrowRight, Play } from 'lucide-react';
-import heroBackground from '@/assets/hero-background.jpg';
+import heroBackground from '@/assets/hero-background-neutral.jpg';
 
 const HeroSection = () => {
   return (
