@@ -9,6 +9,7 @@ import DeveloppementWeb from "./pages/DeveloppementWeb";
 import QuiSommesNous from "./pages/QuiSommesNous";
 import Referencement from "./pages/Referencement";
 import Services from "./pages/Services";
+import Projets from "./pages/Projets";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/qui-sommes-nous" element={<QuiSommesNous />} />
           <Route path="/referencement" element={<Referencement />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/projets" element={<Projets />} />
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
