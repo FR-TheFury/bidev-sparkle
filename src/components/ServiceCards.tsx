@@ -1,43 +1,43 @@
-import { Code, Brain, BarChart3, Smartphone, Shield, Zap } from 'lucide-react';
+import { Code, Brain, BarChart3, Smartphone, Shield, Zap, Users } from 'lucide-react';
 import { ScrollAnimationWrapper } from '@/hooks/use-scroll-animation';
 
 const ServiceCards = () => {
   const services = [
     {
       icon: Code,
-      title: "Développement Web",
-      description: "Sites web modernes, performants et sur mesure pour votre présence en ligne.",
-      features: ["Sites vitrines", "E-commerce", "Applications web", "Sites responsives"],
+      title: "🌐 Création de sites internet sur mesure",
+      description: "Nous réalisons des sites internet modernes, performants et entièrement personnalisés, adaptés à votre secteur et à vos objectifs. Qu'il s'agisse d'un site vitrine, d'un e-commerce ou d'une plateforme professionnelle.",
+      features: ["Conception 100% personnalisée (aucun modèle générique)", "Optimisation SEO dès la création", "Sites rapides, sécurisés et évolutifs", "Intégration aux outils de gestion (CRM, ERP, paiement)"],
       color: "from-blue-500 via-purple-600 to-pink-500",
-      highlight: "Sur mesure",
-      stats: "Sites performants"
-    },
-    {
-      icon: Smartphone,
-      title: "Développement Application",
-      description: "Applications mobiles natives et cross-platform pour iOS et Android. Solutions mobiles complètes adaptées à vos besoins.",
-      features: ["iOS & Android", "Cross-platform", "UX/UI design", "Maintenance"],
-      color: "from-green-500 via-teal-500 to-blue-500",
-      highlight: "Multi-plateforme",
-      stats: "Apps natives"
-    },
-    {
-      icon: BarChart3,
-      title: "Référencement Web",
-      description: "Donnez de la visibilité à votre entreprise et mesurez les retombées de vos actions en temps réel. SEO, SEA, netlinking.",
-      features: ["SEO naturel Google", "Campagnes SEA", "Netlinking", "Analytics"],
-      color: "from-orange-500 via-red-500 to-pink-500",
-      highlight: "Visibilité max",
-      stats: "Résultats mesurables"
+      highlight: "100% Sur mesure",
+      stats: "Sites uniques"
     },
     {
       icon: Brain,
-      title: "Solution Complète",
-      description: "De la création du nom de domaine au déploiement final. Nous gérons l'intégralité de votre projet web de A à Z.",
-      features: ["Nom de domaine", "Hébergement", "Développement", "Déploiement"],
+      title: "💻 Développement web sur mesure",
+      description: "Parce que chaque entreprise est unique, nous concevons des outils digitaux adaptés à vos processus et métiers. De la mise en place d'un ERP personnalisé à la création de plateformes collaboratives.",
+      features: ["ERP et logiciels de gestion (commandes, stock, logistique, RH)", "Outils métiers spécifiques à votre secteur", "Tableaux de bord et reporting temps réel (BI, Power BI)", "Connecteurs et API pour relier vos outils existants"],
       color: "from-purple-500 via-indigo-500 to-blue-500",
-      highlight: "Tout inclus",
-      stats: "Service complet"
+      highlight: "Solutions métier",
+      stats: "Outils évolutifs"
+    },
+    {
+      icon: Smartphone,
+      title: "📱 Développement d'applications mobiles",
+      description: "Nous vous accompagnons dans la conception d'applications mobiles iOS & Android intuitives et performantes, pensées pour améliorer vos services et créer une proximité renforcée avec vos clients.",
+      features: ["Design ergonomique et moderne", "Expérience utilisateur fluide et adaptée", "Intégration de fonctionnalités avancées (notifications, géolocalisation, paiement)", "Développement natif ou hybride selon vos besoins"],
+      color: "from-green-500 via-teal-500 to-blue-500",
+      highlight: "iOS & Android",
+      stats: "Apps performantes"
+    },
+    {
+      icon: Users,
+      title: "🤝 Accompagnement & Support",
+      description: "Chez BI Développement, nous croyons qu'un projet réussi repose sur une collaboration étroite et transparente. Chaque solution est testée pour garantir performance, rapidité, sécurité et fiabilité.",
+      features: ["Écoute & analyse : compréhension de vos besoins", "Conception & prototypage avec validation", "Développement & contrôle qualité rigoureux", "Accompagnement & support continu"],
+      color: "from-orange-500 via-red-500 to-pink-500",
+      highlight: "Suivi 24/7",
+      stats: "Support durable"
     }
   ];
 
@@ -53,8 +53,9 @@ const ServiceCards = () => {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
               Nos <span className="gradient-text-primary">Services</span>
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4 sm:px-0">
-              Une expertise complète pour votre réussite digitale, de la conception à la croissance online
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto px-4 sm:px-0">
+              🎯 <strong>Pourquoi choisir BI Développement ?</strong>
+              <br />Une structure agile et réactive, un service 100% sur mesure, une expertise complète et un accompagnement durable.
             </p>
           </div>
         </ScrollAnimationWrapper>

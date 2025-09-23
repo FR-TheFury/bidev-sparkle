@@ -9,21 +9,21 @@ const DeveloppementWeb = () => {
   const services = [
     {
       icon: <Globe className="w-12 h-12" />,
-      title: "Sites Web sur Mesure",
-      description: "Développement de sites web modernes, rapides et entièrement personnalisés selon vos besoins spécifiques.",
-      features: ["Design responsive", "SEO optimisé", "Performance maximale", "Interface intuitive"]
+      title: "🇹🇳 Un bureau en Tunisie",
+      description: "Nous avons choisi la Tunisie pour une raison simple : ses talents digitaux sont parmi les plus reconnus au monde.",
+      features: ["Équipe de développeurs performants, passionnés et rigoureux", "Présence locale pour accompagner nos clients africains", "Agilité renforcée pour répondre rapidement aux projets", "Excellence technique reconnue mondialement"]
     },
     {
       icon: <Smartphone className="w-12 h-12" />,
-      title: "Applications Mobile",
-      description: "Création d'applications mobiles natives et hybrides pour iOS et Android avec une expérience utilisateur exceptionnelle.",
-      features: ["React Native", "Performance native", "Design moderne", "Compatible iOS/Android"]
+      title: "🇫🇷 Pilotage depuis la France", 
+      description: "Si le développement technique est partagé, tout l'accompagnement client et le contrôle qualité sont assurés depuis notre bureau en France.",
+      features: ["Interlocuteurs dédiés basés en France", "Suivi rigoureux et méthodologie éprouvée", "Standards de qualité européens", "Gage de fiabilité et de satisfaction"]
     },
     {
       icon: <Tablet className="w-12 h-12" />,
-      title: "Progressive Web Apps",
-      description: "Applications web progressives qui offrent une expérience mobile native directement dans le navigateur.",
-      features: ["Fonctionnement hors-ligne", "Installation sur mobile", "Notifications push", "Rapide et fluide"]
+      title: "🤝 La complémentarité",
+      description: "Cette organisation hybride est notre force. Une synergie parfaite entre excellence tunisienne et rigueur française.",
+      features: ["Équipe tunisienne : expertise et productivité", "Équipe française : relation client et qualité", "Coûts optimisés", "Services premium à prix imbattables"]
     }
   ];
 
@@ -79,11 +79,21 @@ const DeveloppementWeb = () => {
           <ScrollAnimationWrapper animation="slide-up" delay="200ms">
             <div className="max-w-4xl">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                Développement Web & Mobile
+                🌍 BI Développement
+                <span className="block text-2xl md:text-3xl mt-2 text-white/90">Un partenaire digital tourné vers l'avenir</span>
               </h1>
               <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
-                Créons ensemble des solutions digitales performantes qui propulsent votre entreprise vers le succès.
+                Chez BI Développement, nous croyons que l'avenir du digital se joue aussi en Afrique.
+                C'est pourquoi nous avons ouvert un bureau à Tunis, au cœur d'un écosystème reconnu mondialement 
+                pour la qualité et l'excellence de ses développeurs.
               </p>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-8">
+                <p className="text-white text-lg">
+                  👉 Cette implantation nous permet d'avoir un pied solide sur le continent africain, 
+                  de nous rapprocher davantage de nos clients et de renforcer notre vision : 
+                  accompagner les entreprises d'aujourd'hui dans leur transformation digitale, avec une expertise internationale.
+                </p>
+              </div>
               <div className="flex justify-start">
                 <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90">
                   <Link to="/contact">
@@ -103,10 +113,10 @@ const DeveloppementWeb = () => {
           <ScrollAnimationWrapper animation="fade-in">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-                Nos Solutions de Développement
+                Notre Organisation Internationale
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Des technologies de pointe pour des résultats exceptionnels
+                Proximité, talents et opportunités au service de votre réussite digitale
               </p>
             </div>
           </ScrollAnimationWrapper>
@@ -145,97 +155,62 @@ const DeveloppementWeb = () => {
           <ScrollAnimationWrapper animation="fade-in">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-                Notre Expertise
+                ✨ Notre Engagement
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Spécialisés en WordPress, nous maîtrisons également le développement sur mesure pour répondre à tous vos besoins
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+                Que vous soyez en France, en Belgique ou en Afrique, avec BI Développement vous bénéficiez :
               </p>
             </div>
           </ScrollAnimationWrapper>
 
           <ScrollAnimationWrapper animation="slide-up" delay="300ms">
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-card p-8 rounded-2xl shadow-lg border border-border/50">
-                <h3 className="text-2xl font-bold text-primary mb-4">WordPress Expert</h3>
-                <p className="text-muted-foreground mb-4">
-                  Notre spécialité principale avec plus de 10 ans d'expérience dans la création de sites WordPress performants et sécurisés.
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              <div className="bg-card p-8 rounded-2xl shadow-lg border border-border/50 text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Shield className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-primary mb-4">Partenaire Agile</h3>
+                <p className="text-muted-foreground">
+                  Un partenaire digital agile et proche de vous, sans lourdeurs administratives.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm text-muted-foreground">
-                    <Zap className="w-4 h-4 text-accent mr-2" />
-                    Sites vitrine et e-commerce
-                  </li>
-                  <li className="flex items-center text-sm text-muted-foreground">
-                    <Zap className="w-4 h-4 text-accent mr-2" />
-                    Thèmes sur mesure
-                  </li>
-                  <li className="flex items-center text-sm text-muted-foreground">
-                    <Zap className="w-4 h-4 text-accent mr-2" />
-                    Extensions personnalisées
-                  </li>
-                </ul>
               </div>
-              <div className="bg-card p-8 rounded-2xl shadow-lg border border-border/50">
-                <h3 className="text-2xl font-bold text-primary mb-4">Développement Sur Mesure</h3>
-                <p className="text-muted-foreground mb-4">
-                  Pour les projets nécessitant des solutions spécifiques, nous développons également des applications web personnalisées.
+              <div className="bg-card p-8 rounded-2xl shadow-lg border border-border/50 text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Globe className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-primary mb-4">Savoir-faire International</h3>
+                <p className="text-muted-foreground">
+                  Un savoir-faire international combinant rigueur française et excellence tunisienne.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm text-muted-foreground">
-                    <Zap className="w-4 h-4 text-accent mr-2" />
-                    Applications web complexes
-                  </li>
-                  <li className="flex items-center text-sm text-muted-foreground">
-                    <Zap className="w-4 h-4 text-accent mr-2" />
-                    API et intégrations
-                  </li>
-                  <li className="flex items-center text-sm text-muted-foreground">
-                    <Zap className="w-4 h-4 text-accent mr-2" />
-                    Solutions sur mesure
-                  </li>
-                </ul>
+              </div>
+              <div className="bg-card p-8 rounded-2xl shadow-lg border border-border/50 text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Zap className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-primary mb-4">Solutions Premium</h3>
+                <p className="text-muted-foreground">
+                  Des solutions sur mesure, performantes et accessibles à prix imbattables.
+                </p>
               </div>
             </div>
           </ScrollAnimationWrapper>
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-6">
+      {/* Slogan Section */}
+      <section className="py-20 bg-gradient-to-r from-primary via-primary-accent to-secondary relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="container mx-auto px-6 relative z-10">
           <ScrollAnimationWrapper animation="fade-in">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-                Notre Processus de Développement
+            <div className="text-center">
+              <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+                💡 Notre Mission
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Une méthodologie éprouvée pour garantir la réussite de votre projet
+              <p className="text-2xl md:text-3xl text-white font-bold mb-8">
+                « L'avenir du digital est en Afrique, construisons-le ensemble »
               </p>
             </div>
           </ScrollAnimationWrapper>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {processSteps.map((step, index) => (
-              <ScrollAnimationWrapper key={index} animation="slide-up" delay={`${index * 150}ms`}>
-                <div className="text-center group">
-                  <div className="relative mb-6">
-                    <div className="w-20 h-20 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto group-hover:scale-110 transition-transform duration-300">
-                      {step.step}
-                    </div>
-                    {index < processSteps.length - 1 && (
-                      <div className="hidden lg:block absolute top-10 left-full w-8 h-px bg-border"></div>
-                    )}
-                  </div>
-                  <h3 className="text-xl font-bold text-foreground mb-4">
-                    {step.title}
-                  </h3>
-                  <p className="text-muted-foreground">
-                    {step.description}
-                  </p>
-                </div>
-              </ScrollAnimationWrapper>
-            ))}
-          </div>
         </div>
       </section>
 

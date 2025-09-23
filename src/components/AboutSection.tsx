@@ -36,14 +36,21 @@ const AboutSection = () => {
         <ScrollAnimationWrapper animation="fade-in">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
-              Notre
-              <span className="block gradient-text-accent">Savoir Faire</span>
+              🚀 BI Développement
+              <span className="block gradient-text-accent">Votre partenaire digital sur mesure</span>
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed px-4 sm:px-0">
-              En s'appuyant sur 10 années d'expérience dans l'univers du digital, BI DEVELOPPEMENT, 
-              agence webmarketing à Marcq-en-Baroeul près de Lille, vous offre de multiples services 
-              ainsi qu'un accompagnement complet afin de permettre à votre entreprise une croissance online.
+              Chez BI Développement, nous concevons et développons des solutions digitales performantes, 
+              pensées pour répondre à vos besoins spécifiques et accompagner durablement la croissance de votre entreprise.
             </p>
+            <div className="mt-6 p-4 sm:p-6 bg-primary/5 rounded-xl border border-primary/10 max-w-4xl mx-auto">
+              <p className="text-sm sm:text-base text-foreground">
+                Notre approche repose sur une écoute attentive, une compréhension fine de vos enjeux et un accompagnement de chaque instant, de la conception à la mise en production.
+                <br /><br />
+                👉 Nous ne sommes pas une très grande structure, et c'est ce qui fait notre force : agilité, proximité et réactivité. 
+                Chaque projet bénéficie d'un suivi personnalisé, sans lourdeurs administratives ni délais interminables.
+              </p>
+            </div>
           </div>
         </ScrollAnimationWrapper>
 
