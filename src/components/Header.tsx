@@ -2,17 +2,10 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import logoBidev from '@/assets/logo-bidev.png';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -66,7 +59,8 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-4 lg:space-x-6 xl:space-x-8 flex-1 justify-center max-w-3xl mx-4 lg:mx-8">
-            {navItems.map((item) => {
+            {/* First 3 nav items */}
+            {navItems.slice(0, 3).map((item) => {
               const isActive = location.pathname === item.href;
               
               return (
@@ -88,32 +82,52 @@ const Header = () => {
             })}
             
             {/* Développement Dropdown */}
-            <DropdownMenu open={isDropdownOpen} onOpenChange={setIsDropdownOpen}>
-              <DropdownMenuTrigger className={`font-medium transition-all duration-300 hover:scale-105 relative group flex items-center gap-1 ${
+            <div className="relative group">
+              <div className={`font-medium transition-all duration-300 hover:scale-105 relative flex items-center gap-1 cursor-pointer ${
                 isScrolled 
                   ? 'text-gray-800 hover:text-primary' 
                   : 'text-white/90 hover:text-white'
               } ${isDevelopmentActive ? 'text-primary' : ''}`}>
                 Développement
-                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className="h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
                 <span className={`absolute -bottom-1 left-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full ${
                   isDevelopmentActive ? 'w-full' : 'w-0'
                 }`}></span>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-56">
+              </div>
+              <div className="absolute top-full left-0 mt-2 w-56 bg-popover/95 backdrop-blur-md rounded-lg border border-border/50 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 {developmentItems.map((item) => (
-                  <DropdownMenuItem key={item.name} asChild>
-                    <Link 
-                      to={item.href}
-                      className="w-full cursor-pointer"
-                      onClick={() => setIsDropdownOpen(false)}
-                    >
-                      {item.name}
-                    </Link>
-                  </DropdownMenuItem>
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="block px-4 py-3 text-sm text-foreground hover:text-primary hover:bg-muted/50 first:rounded-t-lg last:rounded-b-lg transition-colors duration-200"
+                  >
+                    {item.name}
+                  </Link>
                 ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+              </div>
+            </div>
+            
+            {/* Remaining nav items */}
+            {navItems.slice(3).map((item) => {
+              const isActive = location.pathname === item.href;
+              
+              return (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={`font-medium transition-all duration-300 hover:scale-105 relative group ${
+                    isScrolled 
+                      ? 'text-gray-800 hover:text-primary' 
+                      : 'text-white/90 hover:text-white'
+                  } ${isActive ? 'text-primary' : ''}`}
+                >
+                  {item.name}
+                  <span className={`absolute -bottom-1 left-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full ${
+                    isActive ? 'w-full' : 'w-0'
+                  }`}></span>
+                </Link>
+              );
+            })}
           </nav>
 
           {/* CTA Button */}
