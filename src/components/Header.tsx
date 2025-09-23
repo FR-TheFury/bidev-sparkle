@@ -76,16 +76,9 @@ const Header = () => {
           <div className="hidden lg:flex items-center space-x-2 lg:space-x-3 xl:space-x-4 flex-shrink-0">
             <Link 
               to="/contact" 
-              className={`px-2 lg:px-3 xl:px-4 py-1.5 lg:py-2 rounded-lg border-2 font-medium transition-all duration-300 text-xs lg:text-sm xl:text-base whitespace-nowrap ${
-                isScrolled 
-                  ? 'border-primary text-primary hover:bg-primary hover:text-white' 
-                  : 'border-white text-white hover:bg-white hover:text-primary'
-              }`}
+              className="btn-hero text-xs lg:text-sm xl:text-base px-2 lg:px-3 xl:px-4 py-1.5 lg:py-2 whitespace-nowrap"
             >
               Devis gratuit
-            </Link>
-            <Link to="/contact" className="btn-hero text-xs lg:text-sm xl:text-base px-2 lg:px-3 xl:px-4 py-1.5 lg:py-2 whitespace-nowrap">
-              Commencer
             </Link>
           </div>
 
@@ -122,13 +115,10 @@ const Header = () => {
               <div className="flex flex-col space-y-2 sm:space-y-3 pt-2 sm:pt-3 px-3 sm:px-4">
                 <Link 
                   to="/contact" 
-                  className="px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg border-2 border-primary text-primary hover:bg-primary hover:text-white font-medium transition-all duration-300 text-center text-sm sm:text-base"
+                  className="btn-hero text-sm sm:text-base px-3 sm:px-4 py-2 sm:py-2.5 text-center"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Devis gratuit
-                </Link>
-                <Link to="/contact" className="btn-hero text-sm sm:text-base px-3 sm:px-4 py-2 sm:py-2.5" onClick={() => setIsMenuOpen(false)}>
-                  Commencer
                 </Link>
               </div>
             </nav>
