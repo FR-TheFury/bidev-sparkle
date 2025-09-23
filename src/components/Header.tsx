@@ -58,7 +58,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-4 lg:space-x-6 xl:space-x-8 flex-1 justify-center max-w-3xl mx-4 lg:mx-8">
+          <nav className="hidden md:flex items-center space-x-2 lg:space-x-4 xl:space-x-6 flex-1 justify-center max-w-4xl mx-2 lg:mx-4">
             {/* First 3 nav items */}
             {navItems.slice(0, 3).map((item) => {
               const isActive = location.pathname === item.href;
