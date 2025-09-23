@@ -1,11 +1,18 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import logoBidev from '@/assets/logo-bidev.png';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -22,11 +29,19 @@ const Header = () => {
     { name: 'Accueil', href: '/' },
     { name: 'Services', href: '/services' },
     { name: 'Projets', href: '/projets' },
-    { name: 'Développement', href: '/developpement-web' },
     { name: 'Référencement', href: '/referencement' },
     { name: 'Qui sommes nous', href: '/qui-sommes-nous' },
     { name: 'Contact', href: '/contact' },
   ];
+
+  const developmentItems = [
+    { name: 'Développement Web', href: '/developpement-web-specialisee' },
+    { name: 'Applications Mobiles', href: '/developpement-mobile' },
+  ];
+
+  const isDevelopmentActive = location.pathname === '/developpement-web' || 
+                             location.pathname === '/developpement-web-specialisee' || 
+                             location.pathname === '/developpement-mobile';
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -71,6 +86,34 @@ const Header = () => {
                 </Link>
               );
             })}
+            
+            {/* Développement Dropdown */}
+            <DropdownMenu open={isDropdownOpen} onOpenChange={setIsDropdownOpen}>
+              <DropdownMenuTrigger className={`font-medium transition-all duration-300 hover:scale-105 relative group flex items-center gap-1 ${
+                isScrolled 
+                  ? 'text-gray-800 hover:text-primary' 
+                  : 'text-white/90 hover:text-white'
+              } ${isDevelopmentActive ? 'text-primary' : ''}`}>
+                Développement
+                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
+                <span className={`absolute -bottom-1 left-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full ${
+                  isDevelopmentActive ? 'w-full' : 'w-0'
+                }`}></span>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-56">
+                {developmentItems.map((item) => (
+                  <DropdownMenuItem key={item.name} asChild>
+                    <Link 
+                      to={item.href}
+                      className="w-full cursor-pointer"
+                      onClick={() => setIsDropdownOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
           </nav>
 
           {/* CTA Button */}
@@ -113,6 +156,22 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
+              
+              {/* Mobile Développement Section */}
+              <div className="px-3 sm:px-4">
+                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Développement</p>
+                {developmentItems.map((item) => (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="block font-medium transition-colors duration-300 text-sm sm:text-base py-2 pl-4 rounded-lg text-foreground hover:text-primary hover:bg-muted/50"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+              
               <div className="flex flex-col space-y-2 sm:space-y-3 pt-2 sm:pt-3 px-3 sm:px-4">
                 <Link 
                   to="/contact" 
