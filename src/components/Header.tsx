@@ -83,17 +83,20 @@ const Header = () => {
             
             {/* Développement Dropdown */}
             <div className="relative group">
-              <div className={`font-medium transition-all duration-300 hover:scale-105 relative flex items-center gap-1 cursor-pointer ${
-                isScrolled 
-                  ? 'text-gray-800 hover:text-primary' 
-                  : 'text-white/90 hover:text-white'
-              } ${isDevelopmentActive ? 'text-primary' : ''}`}>
+              <Link 
+                to="/developpement-web"
+                className={`font-medium transition-all duration-300 hover:scale-105 relative flex items-center gap-1 ${
+                  isScrolled 
+                    ? 'text-gray-800 hover:text-primary' 
+                    : 'text-white/90 hover:text-white'
+                } ${isDevelopmentActive ? 'text-primary' : ''}`}
+              >
                 Développement
                 <ChevronDown className="h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
                 <span className={`absolute -bottom-1 left-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full ${
                   isDevelopmentActive ? 'w-full' : 'w-0'
                 }`}></span>
-              </div>
+              </Link>
               <div className="absolute top-full left-0 mt-2 w-56 bg-popover/95 backdrop-blur-md rounded-lg border border-border/50 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 {developmentItems.map((item) => (
                   <Link
@@ -172,8 +175,15 @@ const Header = () => {
               ))}
               
               {/* Mobile Développement Section */}
+              <Link
+                to="/developpement-web"
+                className="font-medium transition-colors duration-300 text-sm sm:text-base px-3 sm:px-4 py-2 rounded-lg text-foreground hover:text-primary hover:bg-muted/50"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Développement
+              </Link>
               <div className="px-3 sm:px-4">
-                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Développement</p>
+                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Spécialisations</p>
                 {developmentItems.map((item) => (
                   <Link
                     key={item.name}
