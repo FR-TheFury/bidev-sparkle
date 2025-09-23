@@ -3,7 +3,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ExternalLink, Github, Calendar, Users } from 'lucide-react';
+import { ExternalLink, Github, Calendar, MapPin, Globe } from 'lucide-react';
 
 const Projets = () => {
   // Projets de démonstration - à remplacer par vos vrais projets
@@ -85,28 +85,38 @@ const Projets = () => {
   const categories = ["Tout", "E-commerce", "SaaS", "Vitrine", "Mobile", "EdTech", "Gestion"];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-secondary/5 to-background">
+    <div className="min-h-screen">
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4">
-        <div className="container mx-auto">
+      <section className="pt-24 pb-16 sm:pt-28 sm:pb-20 bg-gradient-to-br from-primary via-primary-glow to-accent relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent"></div>
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <ScrollAnimationWrapper animation="fade-in">
-            <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-                Nos
-                <span className="block gradient-text-primary">Projets</span>
+            <div className="text-center text-white max-w-4xl mx-auto">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                Nos Projets
+                <span className="block text-accent-foreground">Des solutions digitales exceptionnelles</span>
               </h1>
-              <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-                Découvrez nos réalisations et l'expertise que nous mettons au service 
-                de nos clients pour créer des solutions digitales exceptionnelles
+              <p className="text-xl sm:text-2xl text-white/90 mb-8 leading-relaxed">
+                Découvrez nos réalisations et l'expertise que nous mettons au service de nos clients
               </p>
+              <div className="flex items-center justify-center space-x-8 text-sm opacity-90 mb-8">
+                <div className="flex items-center space-x-2">
+                  <MapPin className="h-5 w-5" />
+                  <span>France</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Globe className="h-5 w-5" />
+                  <span>Tunisie</span>
+                </div>
+              </div>
               <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
                 {categories.map((cat) => (
                   <Badge 
                     key={cat} 
                     variant="secondary" 
-                    className="cursor-pointer hover:bg-primary hover:text-primary-foreground transition-colors px-3 py-1.5 text-sm"
+                    className="cursor-pointer hover:bg-white/20 hover:text-white transition-colors px-3 py-1.5 text-sm bg-white/10 text-white border-white/20"
                   >
                     {cat}
                   </Badge>
@@ -118,7 +128,7 @@ const Projets = () => {
       </section>
 
       {/* Projects Grid */}
-      <section className="pb-20 px-4">
+      <section className="py-20 px-4 bg-background">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
             {projets.map((projet, index) => (
