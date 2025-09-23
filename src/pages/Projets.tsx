@@ -169,8 +169,7 @@ const Projets = () => {
                         <Calendar size={14} className="mr-2" />
                         {projet.date}
                       </div>
-                      <div className="flex items-center text-sm text-muted-foreground">
-                        <Users size={14} className="mr-2" />
+                      <div className="text-sm font-medium text-primary">
                         {projet.client}
                       </div>
                     </div>
@@ -179,22 +178,9 @@ const Projets = () => {
                       {projet.titre}
                     </h3>
                     
-                    <p className="text-muted-foreground mb-4 leading-relaxed line-clamp-3">
+                    <p className="text-muted-foreground leading-relaxed line-clamp-3">
                       {projet.description}
                     </p>
-
-                    {/* Technologies */}
-                    <div className="flex flex-wrap gap-2">
-                      {projet.technologies.map((tech) => (
-                        <Badge 
-                          key={tech} 
-                          variant="outline" 
-                          className="text-xs border-primary/20 text-foreground/80"
-                        >
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
                   </CardContent>
                 </Card>
               </ScrollAnimationWrapper>
