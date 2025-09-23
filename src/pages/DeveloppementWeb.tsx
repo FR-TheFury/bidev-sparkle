@@ -9,19 +9,19 @@ const DeveloppementWeb = () => {
   const services = [
     {
       icon: <Globe className="w-12 h-12" />,
-      title: "🇹🇳 Un bureau en Tunisie",
+      title: "Un bureau en Tunisie",
       description: "Nous avons choisi la Tunisie pour une raison simple : ses talents digitaux sont parmi les plus reconnus au monde.",
       features: ["Équipe de développeurs performants, passionnés et rigoureux", "Présence locale pour accompagner nos clients africains", "Agilité renforcée pour répondre rapidement aux projets", "Excellence technique reconnue mondialement"]
     },
     {
       icon: <Smartphone className="w-12 h-12" />,
-      title: "🇫🇷 Pilotage depuis la France", 
+      title: "Pilotage depuis la France", 
       description: "Si le développement technique est partagé, tout l'accompagnement client et le contrôle qualité sont assurés depuis notre bureau en France.",
       features: ["Interlocuteurs dédiés basés en France", "Suivi rigoureux et méthodologie éprouvée", "Standards de qualité européens", "Gage de fiabilité et de satisfaction"]
     },
     {
       icon: <Tablet className="w-12 h-12" />,
-      title: "🤝 La complémentarité",
+      title: "La complémentarité",
       description: "Cette organisation hybride est notre force. Une synergie parfaite entre excellence tunisienne et rigueur française.",
       features: ["Équipe tunisienne : expertise et productivité", "Équipe française : relation client et qualité", "Coûts optimisés", "Services premium à prix imbattables"]
     }
@@ -79,7 +79,7 @@ const DeveloppementWeb = () => {
           <ScrollAnimationWrapper animation="slide-up" delay="200ms">
             <div className="max-w-4xl">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                🌍 BI Développement
+                BI Développement
                 <span className="block text-2xl md:text-3xl mt-2 text-white/90">Un partenaire digital tourné vers l'avenir</span>
               </h1>
               <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
@@ -89,7 +89,7 @@ const DeveloppementWeb = () => {
               </p>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-8">
                 <p className="text-white text-lg">
-                  👉 Cette implantation nous permet d'avoir un pied solide sur le continent africain, 
+                  Cette implantation nous permet d'avoir un pied solide sur le continent africain, 
                   de nous rapprocher davantage de nos clients et de renforcer notre vision : 
                   accompagner les entreprises d'aujourd'hui dans leur transformation digitale, avec une expertise internationale.
                 </p>
@@ -155,7 +155,7 @@ const DeveloppementWeb = () => {
           <ScrollAnimationWrapper animation="fade-in">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-                ✨ Notre Engagement
+                Notre Engagement
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
                 Que vous soyez en France, en Belgique ou en Afrique, avec BI Développement vous bénéficiez :
@@ -197,22 +197,6 @@ const DeveloppementWeb = () => {
         </div>
       </section>
 
-      {/* Slogan Section */}
-      <section className="py-20 bg-gradient-to-r from-primary via-primary-accent to-secondary relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="container mx-auto px-6 relative z-10">
-          <ScrollAnimationWrapper animation="fade-in">
-            <div className="text-center">
-              <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-                💡 Notre Mission
-              </h2>
-              <p className="text-2xl md:text-3xl text-white font-bold mb-8">
-                « L'avenir du digital est en Afrique, construisons-le ensemble »
-              </p>
-            </div>
-          </ScrollAnimationWrapper>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-primary via-primary-accent to-secondary relative overflow-hidden">

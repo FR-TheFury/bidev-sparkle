@@ -90,7 +90,7 @@ const QuiSommesNous = () => {
               </p>
               <div className="mt-8 p-6 bg-primary/5 rounded-xl border border-primary/10">
                 <p className="text-base text-foreground">
-                  👉 Cette implantation nous permet d'avoir un pied solide sur le continent africain, 
+                  Cette implantation nous permet d'avoir un pied solide sur le continent africain, 
                   de nous rapprocher davantage de nos clients et de renforcer notre vision : 
                   accompagner les entreprises d'aujourd'hui dans leur transformation digitale, 
                   avec une expertise internationale.
@@ -132,7 +132,7 @@ const QuiSommesNous = () => {
               <div className="bg-card border border-border rounded-2xl p-8">
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center">
-                    <span className="text-2xl">🇹🇳</span>
+                    <span className="text-2xl">TN</span>
                   </div>
                   <h3 className="text-2xl font-bold text-foreground">Un bureau en Tunisie</h3>
                 </div>
@@ -161,7 +161,7 @@ const QuiSommesNous = () => {
               <div className="bg-card border border-border rounded-2xl p-8">
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center">
-                    <span className="text-2xl">🇫🇷</span>
+                    <span className="text-2xl">FR</span>
                   </div>
                   <h3 className="text-2xl font-bold text-foreground">Pilotage depuis la France</h3>
                 </div>
@@ -194,7 +194,7 @@ const QuiSommesNous = () => {
           <ScrollAnimationWrapper animation="fade-in">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-foreground">
-                🤝 La complémentarité de notre <span className="gradient-text-primary">organisation</span>
+                La complémentarité de notre <span className="gradient-text-primary">organisation</span>
               </h2>
               <p className="text-xl text-muted-foreground mb-12">
                 Cette organisation hybride est notre force
@@ -215,7 +215,7 @@ const QuiSommesNous = () => {
 
               <div className="bg-primary/5 rounded-xl p-6 border border-primary/10">
                 <p className="text-foreground">
-                  👉 Cette complémentarité nous permet d'optimiser les coûts de production, 
+                  Cette complémentarité nous permet d'optimiser les coûts de production, 
                   tout en vous garantissant des services premium à des prix imbattables.
                 </p>
               </div>
@@ -230,7 +230,7 @@ const QuiSommesNous = () => {
           <ScrollAnimationWrapper animation="fade-in">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl sm:text-4xl font-bold mb-8">
-                ✨ Notre <span className="gradient-text-accent">Engagement</span>
+                Notre <span className="gradient-text-accent">Engagement</span>
               </h2>
               <p className="text-xl text-muted-foreground mb-12">
                 Que vous soyez en France, en Belgique ou en Afrique, avec BI Développement vous bénéficiez :
@@ -250,7 +250,7 @@ const QuiSommesNous = () => {
               </div>
 
               <div className="bg-gradient-to-r from-primary to-secondary p-8 rounded-2xl text-white">
-                <h3 className="text-2xl font-bold mb-4">💡 Notre Mission</h3>
+                <h3 className="text-2xl font-bold mb-4">Notre Mission</h3>
                 <p className="text-xl font-medium">
                   « L'avenir du digital est en Afrique, construisons-le ensemble »
                 </p>

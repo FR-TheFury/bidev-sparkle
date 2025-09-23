@@ -5,7 +5,7 @@ const ServiceCards = () => {
   const services = [
     {
       icon: Code,
-      title: "🌐 Création de sites internet sur mesure",
+      title: "Création de sites internet sur mesure",
       description: "Nous réalisons des sites internet modernes, performants et entièrement personnalisés, adaptés à votre secteur et à vos objectifs. Qu'il s'agisse d'un site vitrine, d'un e-commerce ou d'une plateforme professionnelle.",
       features: ["Conception 100% personnalisée (aucun modèle générique)", "Optimisation SEO dès la création", "Sites rapides, sécurisés et évolutifs", "Intégration aux outils de gestion (CRM, ERP, paiement)"],
       color: "from-blue-500 via-purple-600 to-pink-500",
@@ -14,7 +14,7 @@ const ServiceCards = () => {
     },
     {
       icon: Brain,
-      title: "💻 Développement web sur mesure",
+      title: "Développement web sur mesure",
       description: "Parce que chaque entreprise est unique, nous concevons des outils digitaux adaptés à vos processus et métiers. De la mise en place d'un ERP personnalisé à la création de plateformes collaboratives.",
       features: ["ERP et logiciels de gestion (commandes, stock, logistique, RH)", "Outils métiers spécifiques à votre secteur", "Tableaux de bord et reporting temps réel (BI, Power BI)", "Connecteurs et API pour relier vos outils existants"],
       color: "from-purple-500 via-indigo-500 to-blue-500",
@@ -23,7 +23,7 @@ const ServiceCards = () => {
     },
     {
       icon: Smartphone,
-      title: "📱 Développement d'applications mobiles",
+      title: "Développement d'applications mobiles",
       description: "Nous vous accompagnons dans la conception d'applications mobiles iOS & Android intuitives et performantes, pensées pour améliorer vos services et créer une proximité renforcée avec vos clients.",
       features: ["Design ergonomique et moderne", "Expérience utilisateur fluide et adaptée", "Intégration de fonctionnalités avancées (notifications, géolocalisation, paiement)", "Développement natif ou hybride selon vos besoins"],
       color: "from-green-500 via-teal-500 to-blue-500",
@@ -32,7 +32,7 @@ const ServiceCards = () => {
     },
     {
       icon: Users,
-      title: "🤝 Accompagnement & Support",
+      title: "Accompagnement & Support",
       description: "Chez BI Développement, nous croyons qu'un projet réussi repose sur une collaboration étroite et transparente. Chaque solution est testée pour garantir performance, rapidité, sécurité et fiabilité.",
       features: ["Écoute & analyse : compréhension de vos besoins", "Conception & prototypage avec validation", "Développement & contrôle qualité rigoureux", "Accompagnement & support continu"],
       color: "from-orange-500 via-red-500 to-pink-500",
@@ -54,7 +54,7 @@ const ServiceCards = () => {
               Nos <span className="gradient-text-primary">Services</span>
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto px-4 sm:px-0">
-              🎯 <strong>Pourquoi choisir BI Développement ?</strong>
+              <strong>Pourquoi choisir BI Développement ?</strong>
               <br />Une structure agile et réactive, un service 100% sur mesure, une expertise complète et un accompagnement durable.
             </p>
           </div>

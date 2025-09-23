@@ -36,7 +36,7 @@ const AboutSection = () => {
         <ScrollAnimationWrapper animation="fade-in">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
-              🚀 BI Développement
+              BI Développement
               <span className="block gradient-text-accent">Votre partenaire digital sur mesure</span>
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed px-4 sm:px-0">
@@ -47,7 +47,7 @@ const AboutSection = () => {
               <p className="text-sm sm:text-base text-foreground">
                 Notre approche repose sur une écoute attentive, une compréhension fine de vos enjeux et un accompagnement de chaque instant, de la conception à la mise en production.
                 <br /><br />
-                👉 Nous ne sommes pas une très grande structure, et c'est ce qui fait notre force : agilité, proximité et réactivité. 
+                Nous ne sommes pas une très grande structure, et c'est ce qui fait notre force : agilité, proximité et réactivité. 
                 Chaque projet bénéficie d'un suivi personnalisé, sans lourdeurs administratives ni délais interminables.
               </p>
             </div>
