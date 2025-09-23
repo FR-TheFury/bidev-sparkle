@@ -127,7 +127,7 @@ const Projets = () => {
                 animation="fade-in" 
                 delay={`${index * 100}ms`}
               >
-                <Card className="group overflow-hidden border-0 shadow-elegant hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-card/50 backdrop-blur-sm">
+                <Card className="group overflow-hidden border-0 shadow-elegant hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-card/50 backdrop-blur-sm h-[500px] flex flex-col">
                   {/* Image */}
                   <div className="relative overflow-hidden aspect-video">
                     <img 
@@ -163,7 +163,7 @@ const Projets = () => {
                     </div>
                   </div>
 
-                  <CardContent className="p-6">
+                  <CardContent className="p-6 flex-1 flex flex-col justify-between">
                     <div className="flex items-center justify-between mb-3">
                       <div className="flex items-center text-sm text-muted-foreground">
                         <Calendar size={14} className="mr-2" />
