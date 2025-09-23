@@ -105,7 +105,7 @@ const HeroSection = () => {
       </div>
       
       {/* Animated elements */}
-      <div className="absolute bottom-6 sm:bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+      <div className="absolute bottom-6 sm:bottom-10 left-0 right-0 flex justify-center text-white animate-bounce">
         <div className="w-5 h-8 sm:w-6 sm:h-10 border-2 border-white/30 rounded-full flex justify-center">
           <div className="w-1 h-2 sm:h-3 bg-white/60 rounded-full mt-1.5 sm:mt-2 animate-pulse"></div>
         </div>
