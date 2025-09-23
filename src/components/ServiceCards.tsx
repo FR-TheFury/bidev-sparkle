@@ -81,7 +81,7 @@ const ServiceCards = () => {
                   </div>
 
                   {/* Icon & Title */}
-                  <div className="flex items-start space-x-3 sm:space-x-4 mb-4 sm:mb-6 relative z-10 pr-16 sm:pr-20">
+                  <div className="flex items-start space-x-3 sm:space-x-4 mb-4 sm:mb-6 relative z-10 pr-16 sm:pr-20 mt-8 sm:mt-10">
                     <div className={`p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-gradient-to-r ${service.color} shadow-primary group-hover:scale-110 transition-all duration-300 group-hover:shadow-lg flex-shrink-0`}>
                       <IconComponent className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
                     </div>
