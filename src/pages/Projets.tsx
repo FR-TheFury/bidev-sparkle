@@ -11,79 +11,55 @@ const Projets = () => {
   const projets = [
     {
       id: 1,
-      titre: "Site E-commerce Premium",
-      description: "Plateforme e-commerce complète avec gestion des stocks, paiements sécurisés et tableau de bord administrateur.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      categorie: "E-commerce",
+      titre: "Eazy GO",
+      description: "Application mobile de transport connectant chauffeurs et particuliers pour des trajets sécurisés et pratiques.",
+      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop",
+      technologies: ["React Native", "Firebase", "Redux", "Expo"],
+      categorie: "Mobile",
       date: "Mars 2024",
-      client: "Boutique Mode",
+      client: "Eazy GO",
       lienDemo: "#",
       lienGithub: "#"
     },
     {
       id: 2,
-      titre: "Application SaaS Analytics",
-      description: "Dashboard analytique avancé pour le suivi des performances business en temps réel avec graphiques interactifs.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-      technologies: ["Vue.js", "Python", "PostgreSQL", "Chart.js"],
-      categorie: "SaaS",
+      titre: "Pompe Funèbres Buchet",
+      description: "Plateforme web permettant de créer des pages commémoratives pour avertir d'un décès, recevoir des messages de condoléances et gérer les dons pour la famille.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
+      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+      categorie: "Web",
       date: "Février 2024",
-      client: "StartupTech",
+      client: "Pompe Funèbres Buchet",
       lienDemo: "#",
       lienGithub: "#"
     },
     {
       id: 3,
-      titre: "Site Vitrine Corporate",
-      description: "Site web moderne et responsive pour une entreprise de conseil avec animations fluides et optimisation SEO.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-      technologies: ["React", "Tailwind", "Framer Motion", "Vercel"],
+      titre: "BD Taxi",
+      description: "Site vitrine moderne et responsive présentant les services BD Taxi avec système de contact intégré pour faciliter la communication avec l'entreprise.",
+      image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&h=400&fit=crop",
+      technologies: ["React", "Tailwind CSS", "Framer Motion"],
       categorie: "Vitrine",
       date: "Janvier 2024",
-      client: "ConseilPro",
+      client: "BD Taxi",
       lienDemo: "#",
       lienGithub: "#"
     },
     {
       id: 4,
-      titre: "App Mobile React Native",
-      description: "Application mobile cross-platform pour la gestion de tâches avec synchronisation cloud et notifications push.",
-      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop",
-      technologies: ["React Native", "Firebase", "Redux", "Expo"],
-      categorie: "Mobile",
-      date: "Décembre 2023",
-      client: "ProductivityApp",
-      lienDemo: "#",
-      lienGithub: "#"
-    },
-    {
-      id: 5,
-      titre: "Plateforme EdTech",
-      description: "Plateforme d'apprentissage en ligne avec cours vidéo, quiz interactifs et suivi des progrès étudiants.",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop",
-      technologies: ["Next.js", "Prisma", "MySQL", "AWS"],
-      categorie: "EdTech",
-      date: "Novembre 2023",
-      client: "LearnOnline",
-      lienDemo: "#",
-      lienGithub: "#"
-    },
-    {
-      id: 6,
-      titre: "Système de Réservation",
-      description: "Solution complète de réservation en ligne pour restaurants avec gestion des tables et notifications automatiques.",
+      titre: "Home Therapy",
+      description: "Système de réservation intelligent permettant aux thérapeutes sans locaux fixes de réserver des salles adaptées à leurs besoins.",
       image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=400&fit=crop",
-      technologies: ["Laravel", "Vue.js", "MySQL", "Socket.io"],
+      technologies: ["Vue.js", "Laravel", "MySQL", "Socket.io"],
       categorie: "Gestion",
-      date: "Octobre 2023",
-      client: "RestaurantPro",
+      date: "Décembre 2023",
+      client: "Home Therapy",
       lienDemo: "#",
       lienGithub: "#"
     }
   ];
 
-  const categories = ["Tout", "E-commerce", "SaaS", "Vitrine", "Mobile", "EdTech", "Gestion"];
+  const categories = ["Tout", "Mobile", "Web", "Vitrine", "Gestion"];
 
   return (
     <>
