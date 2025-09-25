@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -97,8 +98,40 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen">
-      <Header />
+    <>
+      <Helmet>
+        <title>Contact BiDev | Agence Web Lille - Devis Gratuit Développement & SEO</title>
+        <meta name="description" content="Contactez BiDev pour votre projet web. Devis gratuit, consultation offerte. Agence située à Marcq-en-Barœul près de Lille. Tel: 07 81 79 58 62" />
+        <meta name="keywords" content="contact BiDev, devis gratuit web, agence Lille, consultation développement web, Marcq-en-Barœul, contact agence" />
+        <link rel="canonical" href="https://fr-thefury.github.io/bidev-sparkle/contact" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Contact BiDev",
+            "description": "Page de contact pour demander un devis ou obtenir des informations sur nos services",
+            "mainEntity": {
+              "@type": "LocalBusiness",
+              "name": "BiDev",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "867 Av. de la République",
+                "addressLocality": "Marcq-en-Barœul",
+                "postalCode": "59700",
+                "addressCountry": "FR"
+              },
+              "telephone": "07 81 79 58 62",
+              "email": "contact@bidev.fr",
+              "openingHours": "Mo-Fr 09:00-19:00"
+            }
+          })}
+        </script>
+      </Helmet>
+      
+      <div className="min-h-screen">
+        <Header />
+        
+        <main>
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-gradient-to-br from-primary via-primary-accent to-secondary overflow-hidden">
@@ -325,8 +358,10 @@ const Contact = () => {
         </div>
       </section>
 
-      <Footer />
-    </div>
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 };
 

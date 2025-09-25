@@ -56,13 +56,30 @@ const DeveloppementWebSpecialisee = () => {
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>Développement Web Spécialisé - Solutions sur Mesure | BiDev</title>
-        <meta name="description" content="Développement web spécialisé avec React, Vue.js, Angular. Sites performants, applications web modernes et solutions sur mesure par BiDev." />
-        <meta name="keywords" content="développement web, React, Vue.js, Angular, applications web, sites performants, développement sur mesure" />
-        <link rel="canonical" href="https://bidev.fr/developpement-web-specialisee" />
+        <title>Développement Web Spécialisé | BiDev - Expertise Avancée France-Tunisie</title>
+        <meta name="description" content="Services de développement web spécialisé avec BiDev. Expertise poussée en React, Vue.js, Node.js. Équipe franco-tunisienne pour projets complexes et innovants." />
+        <meta name="keywords" content="développement web spécialisé, expertise React Vue.js, projets complexes, développement avancé, BiDev spécialisation" />
+        <link rel="canonical" href="https://fr-thefury.github.io/bidev-sparkle/developpement-web-specialisee" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Développement Web Spécialisé",
+            "provider": {
+              "@type": "Organization",
+              "name": "BiDev",
+              "url": "https://fr-thefury.github.io/bidev-sparkle/"
+            },
+            "serviceType": "Développement Web Avancé",
+            "areaServed": ["France", "Belgique", "Tunisie"],
+            "description": "Services spécialisés de développement web pour projets complexes et innovants"
+          })}
+        </script>
       </Helmet>
 
       <Header />
+
+      <main>
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-gradient-to-br from-primary via-primary-accent to-secondary overflow-hidden">
@@ -241,6 +258,7 @@ const DeveloppementWebSpecialisee = () => {
         </div>
       </section>
 
+      </main>
       <Footer />
     </div>
   );

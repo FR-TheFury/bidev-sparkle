@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, Globe, Search, Smartphone, PenTool, BarChart3, Shield, ArrowRight } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -145,8 +146,33 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen">
-      <Header />
+    <>
+      <Helmet>
+        <title>Services Web & Mobile | BiDev - Développement, SEO, Design UX/UI à Lille</title>
+        <meta name="description" content="Découvrez tous nos services digitaux : développement web, applications mobiles, référencement SEO, design UX/UI, analytics. Solutions complètes pour votre croissance digitale." />
+        <meta name="keywords" content="services web, développement applications mobiles, référencement SEO, design UX UI, analytics, maintenance web, Lille, BiDev" />
+        <link rel="canonical" href="https://fr-thefury.github.io/bidev-sparkle/services" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Services de développement web et mobile",
+            "provider": {
+              "@type": "Organization",
+              "name": "BiDev",
+              "url": "https://fr-thefury.github.io/bidev-sparkle/"
+            },
+            "serviceType": ["Développement Web", "Applications Mobile", "Référencement SEO", "Design UX/UI", "Analytics", "Maintenance Web"],
+            "areaServed": "France",
+            "description": "Services complets de développement web, applications mobiles et référencement SEO"
+          })}
+        </script>
+      </Helmet>
+      
+      <div className="min-h-screen">
+        <Header />
+        
+        <main>
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-gradient-to-br from-primary via-primary-accent to-secondary overflow-hidden">
@@ -340,8 +366,10 @@ const Services = () => {
         </div>
       </section>
 
-      <Footer />
-    </div>
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 };
 

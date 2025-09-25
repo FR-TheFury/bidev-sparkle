@@ -56,14 +56,30 @@ const DeveloppementMobile = () => {
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>Développement Applications Mobile - iOS & Android | BiDev</title>
-        <meta name="description" content="Développement d'applications mobiles natives et hybrides pour iOS et Android. React Native, Flutter, applications performantes par BiDev." />
-        <meta name="keywords" content="développement mobile, applications iOS, applications Android, React Native, Flutter, applications hybrides" />
-        <link rel="canonical" href="https://bidev.fr/developpement-mobile" />
+        <title>Développement Applications Mobile | BiDev - iOS Android React Native Flutter</title>
+        <meta name="description" content="Développement d'applications mobiles iOS et Android avec BiDev. React Native, Flutter, apps natives. Équipe franco-tunisienne experte en mobile." />
+        <meta name="keywords" content="développement mobile, applications iOS Android, React Native, Flutter, apps natives, développement mobile BiDev" />
+        <link rel="canonical" href="https://fr-thefury.github.io/bidev-sparkle/developpement-mobile" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Développement Applications Mobile",
+            "provider": {
+              "@type": "Organization",
+              "name": "BiDev",
+              "url": "https://fr-thefury.github.io/bidev-sparkle/"
+            },
+            "serviceType": "Développement Mobile",
+            "areaServed": ["France", "Belgique", "Tunisie"],
+            "description": "Développement d'applications mobiles iOS et Android natives et hybrides"
+          })}
+        </script>
       </Helmet>
 
       <Header />
 
+      <main>
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-gradient-to-br from-primary via-primary-accent to-secondary overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -246,6 +262,7 @@ const DeveloppementMobile = () => {
         </div>
       </section>
 
+      </main>
       <Footer />
     </div>
   );

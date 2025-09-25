@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, Smartphone, Globe, Tablet, Code2, Zap, Shield } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -62,8 +63,33 @@ const DeveloppementWeb = () => {
   ];
 
   return (
-    <div className="min-h-screen">
-      <Header />
+    <>
+      <Helmet>
+        <title>Développement Web sur Mesure | BiDev - Sites Internet Professionnels</title>
+        <meta name="description" content="Développement web sur mesure avec BiDev. Équipe franco-tunisienne experte : sites vitrine, e-commerce, applications web. Technologies modernes, prix compétitifs." />
+        <meta name="keywords" content="développement web, sites internet, applications web, e-commerce, équipe France Tunisie, développement sur mesure" />
+        <link rel="canonical" href="https://fr-thefury.github.io/bidev-sparkle/developpement-web" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Développement Web sur Mesure",
+            "provider": {
+              "@type": "Organization",
+              "name": "BiDev",
+              "url": "https://fr-thefury.github.io/bidev-sparkle/"
+            },
+            "serviceType": "Développement Web",
+            "areaServed": ["France", "Belgique", "Tunisie"],
+            "description": "Services de développement web avec équipe franco-tunisienne, sites sur mesure et applications web modernes"
+          })}
+        </script>
+      </Helmet>
+      
+      <div className="min-h-screen">
+        <Header />
+        
+        <main>
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-gradient-to-br from-primary via-primary-accent to-secondary overflow-hidden">
@@ -223,8 +249,10 @@ const DeveloppementWeb = () => {
         </div>
       </section>
 
-      <Footer />
-    </div>
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 };
 

@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { ScrollAnimationWrapper } from '@/hooks/use-scroll-animation';
@@ -47,8 +48,41 @@ const QuiSommesNous = () => {
   ];
 
   return (
-    <div className="min-h-screen">
-      <Header />
+    <>
+      <Helmet>
+        <title>Qui Sommes-Nous | BiDev - Agence Franco-Tunisienne de Développement Web</title>
+        <meta name="description" content="BiDev, agence de développement web franco-tunisienne. Équipe experte basée en France et Tunisie pour des solutions digitales innovantes et accessibles." />
+        <meta name="keywords" content="agence franco-tunisienne, développement web international, équipe France Tunisie, BiDev présentation, agence digitale" />
+        <link rel="canonical" href="https://fr-thefury.github.io/bidev-sparkle/qui-sommes-nous" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "name": "À propos de BiDev",
+            "description": "Présentation de BiDev, agence de développement web franco-tunisienne avec bureaux en France et Tunisie",
+            "mainEntity": {
+              "@type": "Organization",
+              "name": "BiDev",
+              "foundingLocation": [
+                {
+                  "@type": "Place",
+                  "name": "France"
+                },
+                {
+                  "@type": "Place", 
+                  "name": "Tunisie"
+                }
+              ],
+              "mission": "L'avenir du digital est en Afrique, construisons-le ensemble"
+            }
+          })}
+        </script>
+      </Helmet>
+      
+      <div className="min-h-screen">
+        <Header />
+        
+        <main>
       
       {/* Hero Section */}
       <section className="pt-24 pb-16 sm:pt-28 sm:pb-20 bg-gradient-to-br from-primary via-primary-glow to-accent relative overflow-hidden">
@@ -260,8 +294,10 @@ const QuiSommesNous = () => {
         </div>
       </section>
 
-      <Footer />
-    </div>
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 };
 

@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { ScrollAnimationWrapper } from '@/hooks/use-scroll-animation';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -85,8 +86,32 @@ const Projets = () => {
   const categories = ["Tout", "E-commerce", "SaaS", "Vitrine", "Mobile", "EdTech", "Gestion"];
 
   return (
-    <div className="min-h-screen">
-      <Header />
+    <>
+      <Helmet>
+        <title>Portfolio & Réalisations | BiDev - Projets Web & Mobile à Lille</title>
+        <meta name="description" content="Découvrez nos réalisations web et mobile : e-commerce, SaaS, applications mobiles, plateformes EdTech. Portfolio BiDev avec projets clients en France et Tunisie." />
+        <meta name="keywords" content="portfolio web, réalisations développement, projets e-commerce, applications mobiles, SaaS, EdTech, BiDev projets" />
+        <link rel="canonical" href="https://fr-thefury.github.io/bidev-sparkle/projets" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CreativeWork",
+            "name": "Portfolio BiDev - Réalisations Web et Mobile",
+            "creator": {
+              "@type": "Organization",
+              "name": "BiDev",
+              "url": "https://fr-thefury.github.io/bidev-sparkle/"
+            },
+            "description": "Portfolio de réalisations incluant sites e-commerce, applications SaaS, plateformes EdTech et applications mobiles",
+            "genre": ["E-commerce", "SaaS", "Mobile", "EdTech", "Sites Vitrine"]
+          })}
+        </script>
+      </Helmet>
+      
+      <div className="min-h-screen">
+        <Header />
+        
+        <main>
       
       {/* Hero Section */}
       <section className="pt-24 pb-16 sm:pt-28 sm:pb-20 bg-gradient-to-br from-primary via-primary-glow to-accent relative overflow-hidden">
@@ -221,8 +246,10 @@ const Projets = () => {
         </div>
       </section>
 
-      <Footer />
-    </div>
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 };
 

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, Search, TrendingUp, BarChart3, Target, CheckCircle, Star } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -67,8 +68,33 @@ const Referencement = () => {
   ];
 
   return (
-    <div className="min-h-screen">
-      <Header />
+    <>
+      <Helmet>
+        <title>Référencement SEO | BiDev - Agence SEO Lille pour Améliorer votre Visibilité</title>
+        <meta name="description" content="Services de référencement SEO avec BiDev à Lille. Audit SEO, optimisation technique, stratégie de contenu. Améliorez votre visibilité Google et augmentez votre trafic." />
+        <meta name="keywords" content="référencement SEO, audit SEO, optimisation Google, agence SEO Lille, améliorer visibilité, BiDev SEO" />
+        <link rel="canonical" href="https://fr-thefury.github.io/bidev-sparkle/referencement" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Référencement SEO",
+            "provider": {
+              "@type": "Organization",
+              "name": "BiDev",
+              "url": "https://fr-thefury.github.io/bidev-sparkle/"
+            },
+            "serviceType": "SEO",
+            "areaServed": ["France", "Belgique"],
+            "description": "Services complets de référencement naturel pour améliorer votre visibilité sur Google"
+          })}
+        </script>
+      </Helmet>
+      
+      <div className="min-h-screen">
+        <Header />
+        
+        <main>
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-gradient-to-br from-primary via-primary-accent to-secondary overflow-hidden">
@@ -284,8 +310,10 @@ const Referencement = () => {
         </div>
       </section>
 
-      <Footer />
-    </div>
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 };
 
