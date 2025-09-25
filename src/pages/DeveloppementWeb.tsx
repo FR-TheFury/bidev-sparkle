@@ -28,16 +28,6 @@ const DeveloppementWeb = () => {
     }
   ];
 
-  const technologies = [
-    { name: "React", color: "text-blue-500" },
-    { name: "Vue.js", color: "text-green-500" },
-    { name: "Angular", color: "text-red-500" },
-    { name: "Node.js", color: "text-green-600" },
-    { name: "TypeScript", color: "text-blue-600" },
-    { name: "React Native", color: "text-cyan-500" },
-    { name: "Flutter", color: "text-blue-400" },
-    { name: "Python", color: "text-yellow-500" }
-  ];
 
   const processSteps = [
     {

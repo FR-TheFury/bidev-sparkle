@@ -32,23 +32,17 @@ const DeveloppementMobile = () => {
     }
   ];
 
-  const plateformes = [
-    "React Native", "Flutter", "Swift", "Kotlin", "Ionic", "Xamarin", "PWA", "Capacitor"
-  ];
-
   const projetsExemples = [
     {
       title: "Application de Livraison",
       description: "Application mobile complète avec géolocalisation, paiements intégrés et suivi en temps réel des commandes.",
       image: "/placeholder.svg",
-      technologies: ["React Native", "Firebase", "Google Maps"],
       category: "E-commerce"
     },
     {
       title: "App de Fitness",
       description: "Application de suivi sportif avec programmes personnalisés, tracking des performances et communauté.",
       image: "/placeholder.svg",
-      technologies: ["Flutter", "HealthKit", "Cloud Functions"],
       category: "Santé & Fitness"
     }
   ];
@@ -170,15 +164,6 @@ const DeveloppementMobile = () => {
             </div>
           </ScrollAnimationWrapper>
 
-          <div className="flex flex-wrap justify-center gap-4">
-            {plateformes.map((plateforme, index) => (
-              <ScrollAnimationWrapper key={index} animation="fade-in" delay={`${index * 100}ms`}>
-                <div className="bg-card border rounded-full px-6 py-3 text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-105">
-                  {plateforme}
-                </div>
-              </ScrollAnimationWrapper>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -218,19 +203,6 @@ const DeveloppementMobile = () => {
                       {projet.description}
                     </CardDescription>
                   </CardHeader>
-                  <CardContent className="pt-0">
-                    <div className="flex flex-wrap gap-2 mb-6">
-                      {projet.technologies.map((tech, techIndex) => (
-                        <span key={techIndex} className="text-xs bg-muted text-muted-foreground px-3 py-1 rounded-full">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                    <Button variant="outline" className="w-full group">
-                      Voir l'app 
-                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                  </CardContent>
                 </Card>
               </ScrollAnimationWrapper>
             ))}

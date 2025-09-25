@@ -95,12 +95,6 @@ const DeveloppementWebSpecialisee = () => {
               <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
                 Solutions web sur mesure avec les technologies les plus avancées pour des performances exceptionnelles.
               </p>
-              <div className="flex flex-wrap gap-3 mb-8">
-                <Badge variant="secondary" className="text-sm">React</Badge>
-                <Badge variant="secondary" className="text-sm">Vue.js</Badge>
-                <Badge variant="secondary" className="text-sm">Angular</Badge>
-                <Badge variant="secondary" className="text-sm">Node.js</Badge>
-              </div>
               <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90">
                 <Link to="/contact">
                   Demander un devis
