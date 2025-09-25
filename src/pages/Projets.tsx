@@ -6,6 +6,9 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ExternalLink, Github, Calendar, MapPin, Globe } from 'lucide-react';
 import PompeFunebreImage from '@/assets/PompeFunebre.png';
+import HomeTherapieImage from '@/assets/HomeTherapie.png';
+import BDTaxiImage from '@/assets/BDTaxi.png';
+
 
 const Projets = () => {
   // Projets de démonstration - à remplacer par vos vrais projets
@@ -33,22 +36,22 @@ const Projets = () => {
     {
       id: 3,
       titre: "BD Taxi",
-      description: "Site vitrine moderne et responsive présentant les services BD Taxi avec système de contact intégré pour faciliter la communication avec l'entreprise.",
-      image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&h=400&fit=crop",
+      description: "Site vitrine moderne et responsive présentant les services BD Taxi avec contact intégré pour faciliter la communication avec l'entreprise.",
+      image: BDTaxiImage,
       categorie: "Vitrine",
       date: "Janvier 2024",
       client: "BD Taxi",
-      lienDemo: "#",
+      lienDemo: "https://www.bdtaxi.fr",
     },
     {
       id: 4,
       titre: "Home Therapy",
       description: "Système de réservation intelligent permettant aux thérapeutes sans locaux fixes de réserver des salles adaptées à leurs besoins.",
-      image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=400&fit=crop",
+      image: HomeTherapieImage,
       categorie: "Gestion",
       date: "Décembre 2023",
       client: "Home Therapy",
-      lienDemo: "#",
+      lienDemo: "https://www.hometherapiearras.fr",
     }
   ];
 
