@@ -5,6 +5,8 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { ScrollAnimationWrapper } from '@/hooks/use-scroll-animation';
 import { Button } from '@/components/ui/button';
+import HomeTherapieImage from '@/assets/HomeTherapie.png';
+import PompeFunebreImage from '@/assets/PompeFunebre.png';
 
 const DeveloppementWeb = () => {
   const services = [
@@ -213,6 +215,72 @@ const DeveloppementWeb = () => {
         </div>
       </section>
 
+
+      {/* Projets Réalisés Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-6">
+          <ScrollAnimationWrapper animation="fade-in">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
+                Nos Réalisations Web
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Découvrez quelques exemples de nos projets web sur mesure
+              </p>
+            </div>
+          </ScrollAnimationWrapper>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <ScrollAnimationWrapper animation="slide-up" delay="0ms">
+              <div className="bg-card overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-border/50 hover:border-primary/20 h-full flex flex-col">
+                <div className="h-64 bg-muted/50 flex items-center justify-center relative overflow-hidden">
+                  <img 
+                    src={HomeTherapieImage} 
+                    alt="Home Therapy - Système de réservation"
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                </div>
+                <div className="p-6 flex-grow">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full">
+                      Système de Réservation
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold text-card-foreground mb-3">Home Therapy</h3>
+                  <p className="text-muted-foreground text-base leading-relaxed">
+                    Plateforme de réservation de salles pour thérapeutes sans locaux fixes. 
+                    Système complet avec gestion des créneaux, paiements en ligne et interface intuitive.
+                  </p>
+                </div>
+              </div>
+            </ScrollAnimationWrapper>
+
+            <ScrollAnimationWrapper animation="slide-up" delay="200ms">
+              <div className="bg-card overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-border/50 hover:border-primary/20 h-full flex flex-col">
+                <div className="h-64 bg-muted/50 flex items-center justify-center relative overflow-hidden">
+                  <img 
+                    src={PompeFunebreImage} 
+                    alt="Pompe Funèbres Buchet - Page de condoléances"
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                </div>
+                <div className="p-6 flex-grow">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-xs bg-purple-100 text-purple-700 px-3 py-1 rounded-full">
+                      Site Communautaire
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold text-card-foreground mb-3">Pompe Funèbres Buchet</h3>
+                  <p className="text-muted-foreground text-base leading-relaxed">
+                    Plateforme permettant de créer des pages d'avis de décès, recevoir des messages de condoléances 
+                    et organiser des collectes de dons pour les familles endeuillées.
+                  </p>
+                </div>
+              </div>
+            </ScrollAnimationWrapper>
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-primary via-primary-accent to-secondary relative overflow-hidden">

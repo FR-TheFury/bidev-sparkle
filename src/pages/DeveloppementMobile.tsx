@@ -7,6 +7,7 @@ import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { ScrollAnimationWrapper } from '@/hooks/use-scroll-animation';
+import BDTaxiImage from '@/assets/BDTaxi.png';
 
 const DeveloppementMobile = () => {
   const services = [
@@ -34,10 +35,10 @@ const DeveloppementMobile = () => {
 
   const projetsExemples = [
     {
-      title: "Application de Livraison",
-      description: "Application mobile complète avec géolocalisation, paiements intégrés et suivi en temps réel des commandes.",
-      image: "/placeholder.svg",
-      category: "E-commerce"
+      title: "Eazy GO",
+      description: "Application de transport connectant chauffeurs et particuliers avec géolocalisation, paiements intégrés et suivi en temps réel.",
+      image: BDTaxiImage,
+      category: "Transport"
     },
     {
       title: "App de Fitness",
