@@ -14,48 +14,40 @@ const Projets = () => {
       titre: "Eazy GO",
       description: "Application mobile de transport connectant chauffeurs et particuliers pour des trajets sécurisés et pratiques.",
       image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop",
-      technologies: ["React Native", "Firebase", "Redux", "Expo"],
       categorie: "Mobile",
       date: "Mars 2024",
       client: "Eazy GO",
       lienDemo: "#",
-      lienGithub: "#"
     },
     {
       id: 2,
       titre: "Pompe Funèbres Buchet",
       description: "Plateforme web permettant de créer des pages commémoratives pour avertir d'un décès, recevoir des messages de condoléances et gérer les dons pour la famille.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+      image: "/src/assets/pompeFunebre.png",
       categorie: "Web",
       date: "Février 2024",
       client: "Pompe Funèbres Buchet",
-      lienDemo: "#",
-      lienGithub: "#"
+      lienDemo: "https://www.pompesfunebresbuchet.com",
     },
     {
       id: 3,
       titre: "BD Taxi",
       description: "Site vitrine moderne et responsive présentant les services BD Taxi avec système de contact intégré pour faciliter la communication avec l'entreprise.",
       image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&h=400&fit=crop",
-      technologies: ["React", "Tailwind CSS", "Framer Motion"],
       categorie: "Vitrine",
       date: "Janvier 2024",
       client: "BD Taxi",
       lienDemo: "#",
-      lienGithub: "#"
     },
     {
       id: 4,
       titre: "Home Therapy",
       description: "Système de réservation intelligent permettant aux thérapeutes sans locaux fixes de réserver des salles adaptées à leurs besoins.",
       image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=400&fit=crop",
-      technologies: ["Vue.js", "Laravel", "MySQL", "Socket.io"],
       categorie: "Gestion",
       date: "Décembre 2023",
       client: "Home Therapy",
       lienDemo: "#",
-      lienGithub: "#"
     }
   ];
 
@@ -156,13 +148,6 @@ const Projets = () => {
                         aria-label="Voir la démo"
                       >
                         <ExternalLink size={16} className="text-gray-800" />
-                      </a>
-                      <a 
-                        href={projet.lienGithub}
-                        className="p-2 bg-white/90 backdrop-blur-sm rounded-full hover:bg-white transition-colors"
-                        aria-label="Voir le code"
-                      >
-                        <Github size={16} className="text-gray-800" />
                       </a>
                     </div>
 
