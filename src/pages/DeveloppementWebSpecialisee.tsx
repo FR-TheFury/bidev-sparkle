@@ -7,6 +7,8 @@ import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { ScrollAnimationWrapper } from '@/hooks/use-scroll-animation';
+import HomeTherapieImage from '@/assets/HomeTherapie.png';
+import PompeFunebreImage from '@/assets/PompeFunebre.png';
 
 const DeveloppementWebSpecialisee = () => {
   const services = [
@@ -35,16 +37,16 @@ const DeveloppementWebSpecialisee = () => {
 
   const projetsExemples = [
     {
-      title: "E-commerce Moderne",
-      description: "Plateforme de vente en ligne avec gestion des stocks, paiements sécurisés et tableau de bord administrateur.",
-      image: "/placeholder.svg",
-      category: "E-commerce"
+      title: "Home Therapy",
+      description: "Système de réservation de salles pour thérapeutes sans locaux. Interface intuitive avec gestion des créneaux, paiements en ligne et suivi des rendez-vous.",
+      image: HomeTherapieImage,
+      category: "Système de réservation"
     },
     {
-      title: "Application SaaS",
-      description: "Solution logicielle en tant que service avec authentification, abonnements et analytics avancés.",
-      image: "/placeholder.svg",
-      category: "SaaS"
+      title: "Pompe Funèbres Buchet",
+      description: "Plateforme digitale permettant de créer des pages d'hommage pour annoncer un décès, recueillir des messages de condoléances et gérer les dons pour la famille.",
+      image: PompeFunebreImage,
+      category: "Plateforme d'hommage"
     }
   ];
 
