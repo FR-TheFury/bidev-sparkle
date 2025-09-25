@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ExternalLink, Github, Calendar, MapPin, Globe } from 'lucide-react';
+import PompeFunebreImage from '@/assets/PompeFunebre.png';
 
 const Projets = () => {
   // Projets de démonstration - à remplacer par vos vrais projets
@@ -23,7 +24,7 @@ const Projets = () => {
       id: 2,
       titre: "Pompe Funèbres Buchet",
       description: "Plateforme web permettant de créer des pages commémoratives pour avertir d'un décès, recevoir des messages de condoléances et gérer les dons pour la famille.",
-      image: "/src/assets/pompeFunebre.png",
+      image: PompeFunebreImage,
       categorie: "Web",
       date: "Février 2024",
       client: "Pompe Funèbres Buchet",
