@@ -32,23 +32,18 @@ const DeveloppementWebSpecialisee = () => {
     }
   ];
 
-  const technologies = [
-    "React", "Vue.js", "Angular", "Node.js", "PHP", "Python", "TypeScript", "JavaScript"
-  ];
 
   const projetsExemples = [
     {
       title: "E-commerce Moderne",
       description: "Plateforme de vente en ligne avec gestion des stocks, paiements sécurisés et tableau de bord administrateur.",
       image: "/placeholder.svg",
-      technologies: ["React", "Node.js", "Stripe"],
       category: "E-commerce"
     },
     {
       title: "Application SaaS",
       description: "Solution logicielle en tant que service avec authentification, abonnements et analytics avancés.",
       image: "/placeholder.svg",
-      technologies: ["Vue.js", "Python", "PostgreSQL"],
       category: "SaaS"
     }
   ];
@@ -165,16 +160,6 @@ const DeveloppementWebSpecialisee = () => {
               </p>
             </div>
           </ScrollAnimationWrapper>
-
-          <div className="flex flex-wrap justify-center gap-4">
-            {technologies.map((tech, index) => (
-              <ScrollAnimationWrapper key={index} animation="fade-in" delay={`${index * 100}ms`}>
-                <div className="bg-card border rounded-full px-6 py-3 text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-105">
-                  {tech}
-                </div>
-              </ScrollAnimationWrapper>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -214,19 +199,6 @@ const DeveloppementWebSpecialisee = () => {
                       {projet.description}
                     </CardDescription>
                   </CardHeader>
-                  <CardContent className="pt-0">
-                    <div className="flex flex-wrap gap-2 mb-6">
-                      {projet.technologies.map((tech, techIndex) => (
-                        <span key={techIndex} className="text-xs bg-muted text-muted-foreground px-3 py-1 rounded-full">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                    <Button variant="outline" className="w-full group">
-                      Voir le projet 
-                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                  </CardContent>
                 </Card>
               </ScrollAnimationWrapper>
             ))}
