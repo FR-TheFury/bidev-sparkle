@@ -1,4 +1,5 @@
 import { Code, Brain, BarChart3, Smartphone, Shield, Zap, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { ScrollAnimationWrapper } from '@/hooks/use-scroll-animation';
 
 const ServiceCards = () => {
@@ -10,7 +11,8 @@ const ServiceCards = () => {
       features: ["Conception 100% personnalisée (aucun modèle générique)", "Optimisation SEO dès la création", "Sites rapides, sécurisés et évolutifs", "Intégration aux outils de gestion (CRM, ERP, paiement)"],
       color: "from-blue-500 via-purple-600 to-pink-500",
       highlight: "100% Sur mesure",
-      stats: "Sites uniques"
+      stats: "Sites uniques",
+      link: "/developpement-web-specialisee"
     },
     {
       icon: Brain,
@@ -19,7 +21,8 @@ const ServiceCards = () => {
       features: ["ERP et logiciels de gestion (commandes, stock, logistique, RH)", "Outils métiers spécifiques à votre secteur", "Tableaux de bord et reporting temps réel (BI, Power BI)", "Connecteurs et API pour relier vos outils existants"],
       color: "from-purple-500 via-indigo-500 to-blue-500",
       highlight: "Solutions métier",
-      stats: "Outils évolutifs"
+      stats: "Outils évolutifs",
+      link: "/developpement-web-specialisee"
     },
     {
       icon: Smartphone,
@@ -28,7 +31,8 @@ const ServiceCards = () => {
       features: ["Design ergonomique et moderne", "Expérience utilisateur fluide et adaptée", "Intégration de fonctionnalités avancées (notifications, géolocalisation, paiement)", "Développement natif ou hybride selon vos besoins"],
       color: "from-green-500 via-teal-500 to-blue-500",
       highlight: "iOS & Android",
-      stats: "Apps performantes"
+      stats: "Apps performantes",
+      link: "/developpement-mobile"
     },
     {
       icon: Users,
@@ -37,7 +41,8 @@ const ServiceCards = () => {
       features: ["Écoute & analyse : compréhension de vos besoins", "Conception & prototypage avec validation", "Développement & contrôle qualité rigoureux", "Accompagnement & support continu"],
       color: "from-orange-500 via-red-500 to-pink-500",
       highlight: "Suivi 24/7",
-      stats: "Support durable"
+      stats: "Support durable",
+      link: "/referencement"
     }
   ];
 
@@ -114,10 +119,13 @@ const ServiceCards = () => {
                   </div>
 
                   {/* CTA Button */}
-                  <button className="w-full py-3 sm:py-4 px-4 sm:px-6 rounded-xl bg-gradient-to-r from-primary to-secondary text-white font-semibold hover:shadow-lg transition-all duration-300 group-hover:scale-[1.02] relative z-10 text-sm sm:text-base">
+                  <Link 
+                    to={service.link}
+                    className="w-full py-3 sm:py-4 px-4 sm:px-6 rounded-xl bg-gradient-to-r from-primary to-secondary text-white font-semibold hover:shadow-lg transition-all duration-300 group-hover:scale-[1.02] relative z-10 text-sm sm:text-base block text-center"
+                  >
                     Découvrir nos solutions
                     <div className="absolute inset-0 bg-white/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </button>
+                  </Link>
                 </div>
               </ScrollAnimationWrapper>
             );
