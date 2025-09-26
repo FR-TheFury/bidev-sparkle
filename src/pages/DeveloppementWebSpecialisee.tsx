@@ -40,13 +40,27 @@ const DeveloppementWebSpecialisee = () => {
       title: "Home Therapy",
       description: "Système de réservation de salles pour thérapeutes sans locaux. Interface intuitive avec gestion des créneaux, paiements en ligne et suivi des rendez-vous.",
       image: HomeTherapieImage,
-      category: "Système de réservation"
+      category: "Système de réservation",
+      details: {
+        besoins: "Développer une plateforme de réservation de salles thérapeutiques pour professionnels nomades avec gestion des créneaux et paiements automatisés.",
+        enjeux: "Faciliter l'accès aux locaux thérapeutiques, optimiser l'utilisation des espaces disponibles et créer un nouveau modèle économique dans le secteur.",
+        miseEnPlace: "Étude marché thérapeutique → Architecture système → Interface de réservation → Gestion paiements → Tests thérapeutes → Déploiement",
+        benefices: "Plateforme active avec 50+ thérapeutes inscrits, 300+ réservations/mois, automatisation complète des processus, nouvelle source de revenus pour les propriétaires.",
+        tempsRealisation: "5 mois"
+      }
     },
     {
       title: "Pompe Funèbres Buchet",
       description: "Plateforme digitale permettant de créer des pages d'hommage pour annoncer un décès, recueillir des messages de condoléances et gérer les dons pour la famille.",
       image: PompeFunebreImage,
-      category: "Plateforme d'hommage"
+      category: "Plateforme d'hommage",
+      details: {
+        besoins: "Digitaliser les services funéraires en créant une plateforme permettant aux familles de créer des pages d'hommage et recevoir des condoléances en ligne.",
+        enjeux: "Moderniser les pratiques traditionnelles tout en respectant la sensibilité du domaine funéraire et offrir un service de qualité aux familles endeuillées.",
+        miseEnPlace: "Analyse secteur funéraire → Conception UX sensible → Développement sécurisé → Tests familles → Formation équipe → Lancement progressif",
+        benefices: "Plateforme respectueuse permettant création d'hommages personnalisés, collecte de dons, messages de condoléances et partage de souvenirs, adoptée par 200+ familles.",
+        tempsRealisation: "4 mois"
+      }
     }
   ];
 
@@ -176,7 +190,7 @@ const DeveloppementWebSpecialisee = () => {
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {projetsExemples.map((projet, index) => (
               <ScrollAnimationWrapper key={index} animation="slide-up" delay={`${index * 200}ms`}>
-                <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 border border-border/50 hover:border-primary/20 h-full flex flex-col">
+                <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 border border-border/50 hover:border-primary/20 h-[700px] flex flex-col">
                   <div className="h-64 bg-muted/50 flex items-center justify-center relative overflow-hidden">
                     <img 
                       src={projet.image} 
@@ -184,17 +198,45 @@ const DeveloppementWebSpecialisee = () => {
                       className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                     />
                   </div>
-                  <CardHeader className="flex-grow">
-                    <div className="flex items-center justify-between mb-2">
-                      <Badge variant="secondary" className="text-sm">
-                        {projet.category}
-                      </Badge>
-                    </div>
-                    <CardTitle className="text-xl mb-3">{projet.title}</CardTitle>
-                    <CardDescription className="flex-grow text-base leading-relaxed">
-                      {projet.description}
-                    </CardDescription>
-                  </CardHeader>
+                   <CardHeader className="flex-grow">
+                     <div className="flex items-center justify-between mb-2">
+                       <Badge variant="secondary" className="text-sm">
+                         {projet.category}
+                       </Badge>
+                     </div>
+                     <CardTitle className="text-xl mb-3">{projet.title}</CardTitle>
+                     <CardDescription className="text-base leading-relaxed mb-4">
+                       {projet.description}
+                     </CardDescription>
+
+                     {/* Bulles d'information détaillées */}
+                     <div className="space-y-3">
+                       <div className="bg-blue-50 border-l-4 border-blue-400 p-3 rounded-r-lg">
+                         <h4 className="text-xs font-semibold text-blue-800 mb-1">🎯 Demande initiale</h4>
+                         <p className="text-xs text-blue-700 leading-relaxed">{projet.details.besoins}</p>
+                       </div>
+                       
+                       <div className="bg-orange-50 border-l-4 border-orange-400 p-3 rounded-r-lg">
+                         <h4 className="text-xs font-semibold text-orange-800 mb-1">⚡ Enjeux entreprise</h4>
+                         <p className="text-xs text-orange-700 leading-relaxed">{projet.details.enjeux}</p>
+                       </div>
+                       
+                       <div className="bg-green-50 border-l-4 border-green-400 p-3 rounded-r-lg">
+                         <h4 className="text-xs font-semibold text-green-800 mb-1">🚀 Mise en place</h4>
+                         <p className="text-xs text-green-700 leading-relaxed">{projet.details.miseEnPlace}</p>
+                       </div>
+                       
+                       <div className="bg-purple-50 border-l-4 border-purple-400 p-3 rounded-r-lg">
+                         <h4 className="text-xs font-semibold text-purple-800 mb-1">✨ Bénéfices finaux</h4>
+                         <p className="text-xs text-purple-700 leading-relaxed">{projet.details.benefices}</p>
+                       </div>
+                       
+                       <div className="bg-gray-50 border-l-4 border-gray-400 p-3 rounded-r-lg">
+                         <h4 className="text-xs font-semibold text-gray-800 mb-1">⏱️ Temps de réalisation</h4>
+                         <p className="text-xs text-gray-700 font-medium">{projet.details.tempsRealisation}</p>
+                       </div>
+                     </div>
+                   </CardHeader>
                 </Card>
               </ScrollAnimationWrapper>
             ))}

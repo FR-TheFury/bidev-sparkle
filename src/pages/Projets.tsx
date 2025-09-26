@@ -11,7 +11,7 @@ import BDTaxiImage from '@/assets/BDTaxi.png';
 
 
 const Projets = () => {
-  // Projets de démonstration - à remplacer par vos vrais projets
+  // Projets de démonstration avec informations détaillées
   const projets = [
     {
       id: 1,
@@ -22,6 +22,13 @@ const Projets = () => {
       date: "Mars 2024",
       client: "Eazy GO",
       lienDemo: "#",
+      details: {
+        besoins: "Créer une application de transport moderne pour connecter chauffeurs VTC et passagers avec géolocalisation en temps réel et système de paiement intégré.",
+        enjeux: "Concurrencer les leaders du marché tout en offrant une meilleure expérience utilisateur et des tarifs plus compétitifs pour les chauffeurs indépendants.",
+        miseEnPlace: "Étude UX/UI → Développement API backend → App mobile iOS/Android → Intégration paiements → Tests utilisateurs → Déploiement graduel",
+        benefices: "Plateforme fonctionnelle avec 500+ chauffeurs inscrits, interface intuitive, géolocalisation précise, paiements sécurisés et système de notation bidirectionnel.",
+        tempsRealisation: "6 mois"
+      }
     },
     {
       id: 2,
@@ -32,6 +39,13 @@ const Projets = () => {
       date: "Février 2024",
       client: "Pompe Funèbres Buchet",
       lienDemo: "https://www.pompesfunebresbuchet.com",
+      details: {
+        besoins: "Digitaliser les services funéraires en créant une plateforme permettant aux familles de créer des pages d'hommage et recevoir des condoléances en ligne.",
+        enjeux: "Moderniser les pratiques traditionnelles tout en respectant la sensibilité du domaine funéraire et offrir un service de qualité aux familles endeuillées.",
+        miseEnPlace: "Analyse secteur funéraire → Conception UX sensible → Développement sécurisé → Tests familles → Formation équipe → Lancement progressif",
+        benefices: "Plateforme respectueuse permettant création d'hommages personnalisés, collecte de dons, messages de condoléances et partage de souvenirs, adoptée par 200+ familles.",
+        tempsRealisation: "4 mois"
+      }
     },
     {
       id: 3,
@@ -42,6 +56,13 @@ const Projets = () => {
       date: "Janvier 2024",
       client: "BD Taxi",
       lienDemo: "https://www.bdtaxi.fr",
+      details: {
+        besoins: "Créer une présence web professionnelle pour valoriser les services de taxi et faciliter la prise de contact avec les clients.",
+        enjeux: "Se démarquer de la concurrence locale, attirer de nouveaux clients et moderniser l'image de l'entreprise familiale.",
+        miseEnPlace: "Audit concurrentiel → Design responsive → Développement optimisé SEO → Intégration formulaires → Tests multi-appareils → Mise en ligne",
+        benefices: "Site moderne et rapide, +150% de demandes de réservation via le site, meilleur référencement Google local, image professionnelle renforcée.",
+        tempsRealisation: "2 mois"
+      }
     },
     {
       id: 4,
@@ -52,6 +73,13 @@ const Projets = () => {
       date: "Décembre 2023",
       client: "Home Therapy",
       lienDemo: "https://www.hometherapiearras.fr",
+      details: {
+        besoins: "Développer une plateforme de réservation de salles thérapeutiques pour professionnels nomades avec gestion des créneaux et paiements automatisés.",
+        enjeux: "Faciliter l'accès aux locaux thérapeutiques, optimiser l'utilisation des espaces disponibles et créer un nouveau modèle économique dans le secteur.",
+        miseEnPlace: "Étude marché thérapeutique → Architecture système → Interface de réservation → Gestion paiements → Tests thérapeutes → Déploiement",
+        benefices: "Plateforme active avec 50+ thérapeutes inscrits, 300+ réservations/mois, automatisation complète des processus, nouvelle source de revenus pour les propriétaires.",
+        tempsRealisation: "5 mois"
+      }
     }
   ];
 
@@ -134,7 +162,7 @@ const Projets = () => {
                 animation="fade-in" 
                 delay={`${index * 100}ms`}
               >
-                <Card className="group overflow-hidden border-0 shadow-elegant hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-card/50 backdrop-blur-sm h-[500px] flex flex-col">
+                <Card className="group overflow-hidden border-0 shadow-elegant hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-card/50 backdrop-blur-sm h-[800px] flex flex-col">
                   {/* Image */}
                   <div className="relative overflow-hidden aspect-video">
                     <img 
@@ -163,7 +191,7 @@ const Projets = () => {
                     </div>
                   </div>
 
-                  <CardContent className="p-6 flex-1 flex flex-col justify-between">
+                  <CardContent className="p-6 flex-1 flex flex-col">
                     <div className="flex items-center justify-between mb-3">
                       <div className="flex items-center text-sm text-muted-foreground">
                         <Calendar size={14} className="mr-2" />
@@ -178,9 +206,37 @@ const Projets = () => {
                       {projet.titre}
                     </h3>
                     
-                    <p className="text-muted-foreground leading-relaxed line-clamp-3">
+                    <p className="text-muted-foreground leading-relaxed mb-4 line-clamp-2">
                       {projet.description}
                     </p>
+
+                    {/* Bulles d'information détaillées */}
+                    <div className="space-y-3 flex-1">
+                      <div className="bg-blue-50 border-l-4 border-blue-400 p-3 rounded-r-lg">
+                        <h4 className="text-xs font-semibold text-blue-800 mb-1">🎯 Demande initiale</h4>
+                        <p className="text-xs text-blue-700 leading-relaxed">{projet.details.besoins}</p>
+                      </div>
+                      
+                      <div className="bg-orange-50 border-l-4 border-orange-400 p-3 rounded-r-lg">
+                        <h4 className="text-xs font-semibold text-orange-800 mb-1">⚡ Enjeux entreprise</h4>
+                        <p className="text-xs text-orange-700 leading-relaxed">{projet.details.enjeux}</p>
+                      </div>
+                      
+                      <div className="bg-green-50 border-l-4 border-green-400 p-3 rounded-r-lg">
+                        <h4 className="text-xs font-semibold text-green-800 mb-1">🚀 Mise en place</h4>
+                        <p className="text-xs text-green-700 leading-relaxed">{projet.details.miseEnPlace}</p>
+                      </div>
+                      
+                      <div className="bg-purple-50 border-l-4 border-purple-400 p-3 rounded-r-lg">
+                        <h4 className="text-xs font-semibold text-purple-800 mb-1">✨ Bénéfices finaux</h4>
+                        <p className="text-xs text-purple-700 leading-relaxed">{projet.details.benefices}</p>
+                      </div>
+                      
+                      <div className="bg-gray-50 border-l-4 border-gray-400 p-3 rounded-r-lg">
+                        <h4 className="text-xs font-semibold text-gray-800 mb-1">⏱️ Temps de réalisation</h4>
+                        <p className="text-xs text-gray-700 font-medium">{projet.details.tempsRealisation}</p>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
               </ScrollAnimationWrapper>

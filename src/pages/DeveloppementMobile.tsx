@@ -38,13 +38,27 @@ const DeveloppementMobile = () => {
       title: "Eazy GO",
       description: "Application de transport connectant chauffeurs et particuliers avec géolocalisation, paiements intégrés et suivi en temps réel.",
       image: "/placeholder.svg",
-      category: "Transport"
+      category: "Transport",
+      details: {
+        besoins: "Créer une application de transport moderne pour connecter chauffeurs VTC et passagers avec géolocalisation en temps réel et système de paiement intégré.",
+        enjeux: "Concurrencer les leaders du marché tout en offrant une meilleure expérience utilisateur et des tarifs plus compétitifs pour les chauffeurs indépendants.",
+        miseEnPlace: "Étude UX/UI → Développement API backend → App mobile iOS/Android → Intégration paiements → Tests utilisateurs → Déploiement graduel",
+        benefices: "Plateforme fonctionnelle avec 500+ chauffeurs inscrits, interface intuitive, géolocalisation précise, paiements sécurisés et système de notation bidirectionnel.",
+        tempsRealisation: "6 mois"
+      }
     },
     {
       title: "App de Fitness",
       description: "Application de suivi sportif avec programmes personnalisés, tracking des performances et communauté.",
       image: "/placeholder.svg",
-      category: "Santé & Fitness"
+      category: "Santé & Fitness",
+      details: {
+        besoins: "Développer une app complète de fitness avec suivi personnalisé, programmes d'entraînement et fonctionnalités communautaires pour motiver les utilisateurs.",
+        enjeux: "Se positionner sur le marché très concurrentiel des apps fitness en proposant une expérience unique alliant performance technique et engagement utilisateur.",
+        miseEnPlace: "Recherche UX fitness → Développement algorithmes → Interface native → Intégration wearables → Beta tests → Lancement App Stores",
+        benefices: "App avec 10k+ téléchargements, taux de rétention 65%, programmes adaptatifs, communauté active et partenariats salles de sport.",
+        tempsRealisation: "8 mois"
+      }
     }
   ];
 
@@ -185,7 +199,7 @@ const DeveloppementMobile = () => {
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {projetsExemples.map((projet, index) => (
               <ScrollAnimationWrapper key={index} animation="slide-up" delay={`${index * 200}ms`}>
-                <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 border border-border/50 hover:border-primary/20 h-full flex flex-col">
+                <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 border border-border/50 hover:border-primary/20 h-[700px] flex flex-col">
                   <div className="h-64 bg-muted/50 flex items-center justify-center relative overflow-hidden">
                     <img 
                       src={projet.image} 
@@ -193,17 +207,45 @@ const DeveloppementMobile = () => {
                       className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                     />
                   </div>
-                  <CardHeader className="flex-grow">
-                    <div className="flex items-center justify-between mb-2">
-                      <Badge variant="secondary" className="text-sm">
-                        {projet.category}
-                      </Badge>
-                    </div>
-                    <CardTitle className="text-xl mb-3">{projet.title}</CardTitle>
-                    <CardDescription className="flex-grow text-base leading-relaxed">
-                      {projet.description}
-                    </CardDescription>
-                  </CardHeader>
+                   <CardHeader className="flex-grow">
+                     <div className="flex items-center justify-between mb-2">
+                       <Badge variant="secondary" className="text-sm">
+                         {projet.category}
+                       </Badge>
+                     </div>
+                     <CardTitle className="text-xl mb-3">{projet.title}</CardTitle>
+                     <CardDescription className="text-base leading-relaxed mb-4">
+                       {projet.description}
+                     </CardDescription>
+
+                     {/* Bulles d'information détaillées */}
+                     <div className="space-y-3">
+                       <div className="bg-blue-50 border-l-4 border-blue-400 p-3 rounded-r-lg">
+                         <h4 className="text-xs font-semibold text-blue-800 mb-1">🎯 Demande initiale</h4>
+                         <p className="text-xs text-blue-700 leading-relaxed">{projet.details.besoins}</p>
+                       </div>
+                       
+                       <div className="bg-orange-50 border-l-4 border-orange-400 p-3 rounded-r-lg">
+                         <h4 className="text-xs font-semibold text-orange-800 mb-1">⚡ Enjeux entreprise</h4>
+                         <p className="text-xs text-orange-700 leading-relaxed">{projet.details.enjeux}</p>
+                       </div>
+                       
+                       <div className="bg-green-50 border-l-4 border-green-400 p-3 rounded-r-lg">
+                         <h4 className="text-xs font-semibold text-green-800 mb-1">🚀 Mise en place</h4>
+                         <p className="text-xs text-green-700 leading-relaxed">{projet.details.miseEnPlace}</p>
+                       </div>
+                       
+                       <div className="bg-purple-50 border-l-4 border-purple-400 p-3 rounded-r-lg">
+                         <h4 className="text-xs font-semibold text-purple-800 mb-1">✨ Bénéfices finaux</h4>
+                         <p className="text-xs text-purple-700 leading-relaxed">{projet.details.benefices}</p>
+                       </div>
+                       
+                       <div className="bg-gray-50 border-l-4 border-gray-400 p-3 rounded-r-lg">
+                         <h4 className="text-xs font-semibold text-gray-800 mb-1">⏱️ Temps de réalisation</h4>
+                         <p className="text-xs text-gray-700 font-medium">{projet.details.tempsRealisation}</p>
+                       </div>
+                     </div>
+                   </CardHeader>
                 </Card>
               </ScrollAnimationWrapper>
             ))}
