@@ -8,6 +8,7 @@ import { ExternalLink, Github, Calendar, MapPin, Globe } from 'lucide-react';
 import PompeFunebreImage from '@/assets/PompeFunebre.png';
 import HomeTherapieImage from '@/assets/HomeTherapie.png';
 import BDTaxiImage from '@/assets/BDTaxi.png';
+import EazyGoImage from '@/assets/EazyGo.png';
 
 
 const Projets = () => {
@@ -17,7 +18,7 @@ const Projets = () => {
       id: 1,
       titre: "Eazy GO",
       description: "Application mobile de transport connectant chauffeurs et particuliers pour des trajets sécurisés et pratiques.",
-      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop",
+      image: EazyGoImage,
       categorie: "Mobile",
       date: "Mars 2024",
       client: "Eazy GO",
@@ -164,7 +165,7 @@ const Projets = () => {
               >
                 <Card className="group overflow-hidden border-0 shadow-elegant hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-card/50 backdrop-blur-sm h-[800px] flex flex-col">
                   {/* Image */}
-                  <div className="relative overflow-hidden aspect-video">
+                  <div className="relative overflow-hidden h-80">
                     <img 
                       src={projet.image} 
                       alt={projet.titre}

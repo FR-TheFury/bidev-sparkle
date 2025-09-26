@@ -233,7 +233,7 @@ const DeveloppementWeb = () => {
            <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
              <ScrollAnimationWrapper animation="slide-up" delay="0ms">
                <div className="bg-card overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-border/50 hover:border-primary/20 h-[700px] flex flex-col">
-                 <div className="h-64 bg-muted/50 flex items-center justify-center relative overflow-hidden">
+                   <div className="h-80 bg-muted/50 flex items-center justify-center relative overflow-hidden">
                    <img 
                      src={HomeTherapieImage} 
                      alt="Home Therapy - Système de réservation"

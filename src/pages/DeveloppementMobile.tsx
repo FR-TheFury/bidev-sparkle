@@ -8,6 +8,8 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { ScrollAnimationWrapper } from '@/hooks/use-scroll-animation';
 import BDTaxiImage from '@/assets/BDTaxi.png';
+import EazyGoImage from '@/assets/EazyGo.png';
+import FitnessAppImage from '@/assets/FitnessApp.png';
 
 const DeveloppementMobile = () => {
   const services = [
@@ -37,7 +39,7 @@ const DeveloppementMobile = () => {
     {
       title: "Eazy GO",
       description: "Application de transport connectant chauffeurs et particuliers avec géolocalisation, paiements intégrés et suivi en temps réel.",
-      image: "/placeholder.svg",
+      image: EazyGoImage,
       category: "Transport",
       details: {
         besoins: "Créer une application de transport moderne pour connecter chauffeurs VTC et passagers avec géolocalisation en temps réel et système de paiement intégré.",
@@ -50,7 +52,7 @@ const DeveloppementMobile = () => {
     {
       title: "App de Fitness",
       description: "Application de suivi sportif avec programmes personnalisés, tracking des performances et communauté.",
-      image: "/placeholder.svg",
+      image: FitnessAppImage,
       category: "Santé & Fitness",
       details: {
         besoins: "Développer une app complète de fitness avec suivi personnalisé, programmes d'entraînement et fonctionnalités communautaires pour motiver les utilisateurs.",
@@ -200,7 +202,7 @@ const DeveloppementMobile = () => {
             {projetsExemples.map((projet, index) => (
               <ScrollAnimationWrapper key={index} animation="slide-up" delay={`${index * 200}ms`}>
                 <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 border border-border/50 hover:border-primary/20 h-[700px] flex flex-col">
-                  <div className="h-64 bg-muted/50 flex items-center justify-center relative overflow-hidden">
+                  <div className="h-80 bg-muted/50 flex items-center justify-center relative overflow-hidden">
                     <img 
                       src={projet.image} 
                       alt={projet.title}
