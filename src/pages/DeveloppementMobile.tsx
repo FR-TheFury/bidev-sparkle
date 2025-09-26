@@ -37,7 +37,7 @@ const DeveloppementMobile = () => {
     {
       title: "Eazy GO",
       description: "Application de transport connectant chauffeurs et particuliers avec géolocalisation, paiements intégrés et suivi en temps réel.",
-      image: BDTaxiImage,
+      image: "/placeholder.svg",
       category: "Transport"
     },
     {
