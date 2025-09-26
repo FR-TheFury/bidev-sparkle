@@ -165,7 +165,7 @@ const Projets = () => {
               >
                 <Card className="group overflow-hidden border-0 shadow-elegant hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-card/50 backdrop-blur-sm h-[800px] flex flex-col">
                   {/* Image */}
-                  <div className="relative overflow-hidden h-80">
+                  <div className="relative overflow-hidden h-96">
                     <img 
                       src={projet.image} 
                       alt={projet.titre}

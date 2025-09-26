@@ -191,7 +191,7 @@ const DeveloppementWebSpecialisee = () => {
             {projetsExemples.map((projet, index) => (
               <ScrollAnimationWrapper key={index} animation="slide-up" delay={`${index * 200}ms`}>
                 <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 border border-border/50 hover:border-primary/20 h-[700px] flex flex-col">
-                  <div className="h-80 bg-muted/50 flex items-center justify-center relative overflow-hidden">
+                  <div className="h-96 bg-muted/50 flex items-center justify-center relative overflow-hidden">
                     <img 
                       src={projet.image} 
                       alt={projet.title}
