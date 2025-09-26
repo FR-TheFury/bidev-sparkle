@@ -1,4 +1,5 @@
 import { ArrowRight, Play, Code, Smartphone } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import heroBackground from '@/assets/hero-background-neutral.jpg';
 import { ScrollAnimationWrapper } from '@/hooks/use-scroll-animation';
 
@@ -25,7 +26,7 @@ const HeroSection = () => {
             <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-3 sm:mb-4 md:mb-6 drop-shadow-2xl leading-tight">
               Agence
               <span className="block gradient-text-accent drop-shadow-xl">
-                Web Marketing
+                Digitale
               </span>
             </h1>
           </ScrollAnimationWrapper>
@@ -40,15 +41,21 @@ const HeroSection = () => {
           {/* CTA Buttons */}
           <ScrollAnimationWrapper animation="fade-in" delay="500ms">
             <div className="flex flex-col xs:flex-row items-center justify-center gap-3 sm:gap-4 md:gap-6 mb-6 sm:mb-8 md:mb-12 px-2 sm:px-4 md:px-0">
-              <button className="w-full xs:w-auto bg-white text-black px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl group flex items-center justify-center text-xs sm:text-sm md:text-base">
+              <Link 
+                to="/contact"
+                className="w-full xs:w-auto bg-white text-black px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl group flex items-center justify-center text-xs sm:text-sm md:text-base"
+              >
                 Démarrer votre projet
                 <ArrowRight className="ml-2 h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </Link>
               
-              <button className="w-full xs:w-auto bg-white/20 backdrop-blur-sm text-white px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-lg border border-white/30 font-semibold hover:bg-white/30 transition-all duration-300 group flex items-center justify-center text-xs sm:text-sm md:text-base">
+              <Link 
+                to="/projets"
+                className="w-full xs:w-auto bg-white/20 backdrop-blur-sm text-white px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-lg border border-white/30 font-semibold hover:bg-white/30 transition-all duration-300 group flex items-center justify-center text-xs sm:text-sm md:text-base"
+              >
                 <Play className="mr-2 h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5" />
                 Voir nos réalisations
-              </button>
+              </Link>
             </div>
           </ScrollAnimationWrapper>
           
@@ -74,7 +81,10 @@ const HeroSection = () => {
         {/* Services Encarts */}
         <ScrollAnimationWrapper animation="fade-in" delay="900ms">
           <div className="grid xs:grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6 max-w-2xl mx-auto mb-8 sm:mb-12 md:mb-16 mt-6 sm:mt-8 md:mt-12 px-2 sm:px-4 md:px-0">
-            <div className="flex items-center p-3 sm:p-4 md:p-5 bg-white/95 backdrop-blur-sm rounded-xl border border-white/30 hover:bg-white transition-all duration-300 shadow-lg">
+            <Link 
+              to="/developpement-web-specialisee"
+              className="flex items-center p-3 sm:p-4 md:p-5 bg-white/95 backdrop-blur-sm rounded-xl border border-white/30 hover:bg-white transition-all duration-300 shadow-lg cursor-pointer"
+            >
               <div className="p-2 sm:p-3 rounded-lg bg-primary/10 mr-2 sm:mr-3 md:mr-4 flex-shrink-0">
                 <Code className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-primary" />
               </div>
@@ -86,8 +96,11 @@ const HeroSection = () => {
                   Sites internet modernes
                 </p>
               </div>
-            </div>
-            <div className="flex items-center p-3 sm:p-4 md:p-5 bg-white/95 backdrop-blur-sm rounded-xl border border-white/30 hover:bg-white transition-all duration-300 shadow-lg">
+            </Link>
+            <Link 
+              to="/developpement-mobile"
+              className="flex items-center p-3 sm:p-4 md:p-5 bg-white/95 backdrop-blur-sm rounded-xl border border-white/30 hover:bg-white transition-all duration-300 shadow-lg cursor-pointer"
+            >
               <div className="p-2 sm:p-3 rounded-lg bg-primary/10 mr-2 sm:mr-3 md:mr-4 flex-shrink-0">
                 <Smartphone className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-primary" />
               </div>
@@ -99,7 +112,7 @@ const HeroSection = () => {
                   Applications sur mesure
                 </p>
               </div>
-            </div>
+            </Link>
           </div>
         </ScrollAnimationWrapper>
       </div>
