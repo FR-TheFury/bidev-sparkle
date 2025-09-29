@@ -5,6 +5,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { ScrollAnimationWrapper } from '@/hooks/use-scroll-animation';
 import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
 import HomeTherapieImage from '@/assets/HomeTherapie.png';
 import PompeFunebreImage from '@/assets/PompeFunebre.png';
 
@@ -230,111 +231,119 @@ const DeveloppementWeb = () => {
             </div>
           </ScrollAnimationWrapper>
 
-           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-             <ScrollAnimationWrapper animation="slide-up" delay="0ms">
-               <div className="bg-card overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-border/50 hover:border-primary/20 h-[700px] flex flex-col">
-                   <div className="h-96 bg-muted/50 flex items-center justify-center relative overflow-hidden">
-                   <img 
-                     src={HomeTherapieImage} 
-                     alt="Home Therapy - Système de réservation"
-                     className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                   />
-                 </div>
-                 <div className="p-6 flex-grow flex flex-col">
-                   <div className="flex items-center justify-between mb-2">
-                     <span className="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full">
-                       Système de Réservation
-                     </span>
-                   </div>
-                   <h3 className="text-xl font-bold text-card-foreground mb-3">Home Therapy</h3>
-                   <p className="text-muted-foreground text-base leading-relaxed mb-4">
-                     Plateforme de réservation de salles pour thérapeutes sans locaux fixes. 
-                     Système complet avec gestion des créneaux, paiements en ligne et interface intuitive.
-                   </p>
+           <div className="space-y-12 max-w-7xl mx-auto">
+              <ScrollAnimationWrapper animation="slide-up" delay="0ms">
+                <Card className="overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-border/50 hover:border-primary/20">
+                  <div className="grid lg:grid-cols-2 gap-0">
+                    <div className="relative overflow-hidden h-64 sm:h-80 lg:h-96">
+                      <img 
+                        src={HomeTherapieImage} 
+                        alt="Home Therapy - Système de réservation"
+                        className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                      />
+                    </div>
+                    <div className="p-6 lg:p-8 flex flex-col justify-between">
+                      <div>
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="text-sm bg-blue-100 text-blue-700 px-3 py-1 rounded-full">
+                            Système de Réservation
+                          </span>
+                        </div>
+                        <h3 className="text-2xl lg:text-3xl font-bold text-card-foreground mb-4">Home Therapy</h3>
+                        <p className="text-muted-foreground text-base lg:text-lg leading-relaxed mb-6">
+                          Plateforme de réservation de salles pour thérapeutes sans locaux fixes. 
+                          Système complet avec gestion des créneaux, paiements en ligne et interface intuitive.
+                        </p>
 
-                   {/* Bulles d'information détaillées */}
-                   <div className="space-y-3 flex-1">
-                     <div className="bg-blue-50 border-l-4 border-blue-400 p-3 rounded-r-lg">
-                       <h4 className="text-xs font-semibold text-blue-800 mb-1">🎯 Demande initiale</h4>
-                       <p className="text-xs text-blue-700 leading-relaxed">Développer une plateforme de réservation de salles thérapeutiques pour professionnels nomades avec gestion des créneaux et paiements automatisés.</p>
-                     </div>
-                     
-                     <div className="bg-orange-50 border-l-4 border-orange-400 p-3 rounded-r-lg">
-                       <h4 className="text-xs font-semibold text-orange-800 mb-1">⚡ Enjeux entreprise</h4>
-                       <p className="text-xs text-orange-700 leading-relaxed">Faciliter l'accès aux locaux thérapeutiques, optimiser l'utilisation des espaces disponibles et créer un nouveau modèle économique dans le secteur.</p>
-                     </div>
-                     
-                     <div className="bg-green-50 border-l-4 border-green-400 p-3 rounded-r-lg">
-                       <h4 className="text-xs font-semibold text-green-800 mb-1">🚀 Mise en place</h4>
-                       <p className="text-xs text-green-700 leading-relaxed">Étude marché thérapeutique → Architecture système → Interface de réservation → Gestion paiements → Tests thérapeutes → Déploiement</p>
-                     </div>
-                     
-                     <div className="bg-purple-50 border-l-4 border-purple-400 p-3 rounded-r-lg">
-                       <h4 className="text-xs font-semibold text-purple-800 mb-1">✨ Bénéfices finaux</h4>
-                       <p className="text-xs text-purple-700 leading-relaxed">Plateforme active avec 50+ thérapeutes inscrits, 300+ réservations/mois, automatisation complète des processus, nouvelle source de revenus pour les propriétaires.</p>
-                     </div>
-                     
-                     <div className="bg-gray-50 border-l-4 border-gray-400 p-3 rounded-r-lg">
-                       <h4 className="text-xs font-semibold text-gray-800 mb-1">⏱️ Temps de réalisation</h4>
-                       <p className="text-xs text-gray-700 font-medium">5 mois</p>
-                     </div>
-                   </div>
-                 </div>
-               </div>
-             </ScrollAnimationWrapper>
+                        {/* Bulles d'information détaillées */}
+                        <div className="space-y-3">
+                          <div className="bg-blue-50 border-l-4 border-blue-400 p-3 rounded-r-lg">
+                            <h4 className="text-sm font-semibold text-blue-800 mb-1">🎯 Demande initiale</h4>
+                            <p className="text-sm text-blue-700 leading-relaxed">Développer une plateforme de réservation de salles thérapeutiques pour professionnels nomades avec gestion des créneaux et paiements automatisés.</p>
+                          </div>
+                          
+                          <div className="bg-orange-50 border-l-4 border-orange-400 p-3 rounded-r-lg">
+                            <h4 className="text-sm font-semibold text-orange-800 mb-1">⚡ Enjeux entreprise</h4>
+                            <p className="text-sm text-orange-700 leading-relaxed">Faciliter l'accès aux locaux thérapeutiques, optimiser l'utilisation des espaces disponibles et créer un nouveau modèle économique dans le secteur.</p>
+                          </div>
+                          
+                          <div className="bg-green-50 border-l-4 border-green-400 p-3 rounded-r-lg">
+                            <h4 className="text-sm font-semibold text-green-800 mb-1">🚀 Mise en place</h4>
+                            <p className="text-sm text-green-700 leading-relaxed">Étude marché thérapeutique → Architecture système → Interface de réservation → Gestion paiements → Tests thérapeutes → Déploiement</p>
+                          </div>
+                          
+                          <div className="bg-purple-50 border-l-4 border-purple-400 p-3 rounded-r-lg">
+                            <h4 className="text-sm font-semibold text-purple-800 mb-1">✨ Bénéfices finaux</h4>
+                            <p className="text-sm text-purple-700 leading-relaxed">Plateforme active avec 50+ thérapeutes inscrits, 300+ réservations/mois, automatisation complète des processus, nouvelle source de revenus pour les propriétaires.</p>
+                          </div>
+                          
+                          <div className="bg-gray-50 border-l-4 border-gray-400 p-3 rounded-r-lg">
+                            <h4 className="text-sm font-semibold text-gray-800 mb-1">⏱️ Temps de réalisation</h4>
+                            <p className="text-sm text-gray-700 font-medium">5 mois</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+              </ScrollAnimationWrapper>
 
-             <ScrollAnimationWrapper animation="slide-up" delay="200ms">
-               <div className="bg-card overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-border/50 hover:border-primary/20 h-[700px] flex flex-col">
-                 <div className="h-64 bg-muted/50 flex items-center justify-center relative overflow-hidden">
-                   <img 
-                     src={PompeFunebreImage} 
-                     alt="Pompe Funèbres Buchet - Page de condoléances"
-                     className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                   />
-                 </div>
-                 <div className="p-6 flex-grow flex flex-col">
-                   <div className="flex items-center justify-between mb-2">
-                     <span className="text-xs bg-purple-100 text-purple-700 px-3 py-1 rounded-full">
-                       Site Communautaire
-                     </span>
-                   </div>
-                   <h3 className="text-xl font-bold text-card-foreground mb-3">Pompe Funèbres Buchet</h3>
-                   <p className="text-muted-foreground text-base leading-relaxed mb-4">
-                     Plateforme permettant de créer des pages d'avis de décès, recevoir des messages de condoléances 
-                     et organiser des collectes de dons pour les familles endeuillées.
-                   </p>
+              <ScrollAnimationWrapper animation="slide-up" delay="200ms">
+                <Card className="overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-border/50 hover:border-primary/20">
+                  <div className="grid lg:grid-cols-2 gap-0">
+                    <div className="relative overflow-hidden h-64 sm:h-80 lg:h-96">
+                      <img 
+                        src={PompeFunebreImage} 
+                        alt="Pompe Funèbres Buchet - Page de condoléances"
+                        className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                      />
+                    </div>
+                    <div className="p-6 lg:p-8 flex flex-col justify-between">
+                      <div>
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="text-sm bg-purple-100 text-purple-700 px-3 py-1 rounded-full">
+                            Site Communautaire
+                          </span>
+                        </div>
+                        <h3 className="text-2xl lg:text-3xl font-bold text-card-foreground mb-4">Pompe Funèbres Buchet</h3>
+                        <p className="text-muted-foreground text-base lg:text-lg leading-relaxed mb-6">
+                          Plateforme permettant de créer des pages d'avis de décès, recevoir des messages de condoléances 
+                          et organiser des collectes de dons pour les familles endeuillées.
+                        </p>
 
-                   {/* Bulles d'information détaillées */}
-                   <div className="space-y-3 flex-1">
-                     <div className="bg-blue-50 border-l-4 border-blue-400 p-3 rounded-r-lg">
-                       <h4 className="text-xs font-semibold text-blue-800 mb-1">🎯 Demande initiale</h4>
-                       <p className="text-xs text-blue-700 leading-relaxed">Digitaliser les services funéraires en créant une plateforme permettant aux familles de créer des pages d'hommage et recevoir des condoléances en ligne.</p>
-                     </div>
-                     
-                     <div className="bg-orange-50 border-l-4 border-orange-400 p-3 rounded-r-lg">
-                       <h4 className="text-xs font-semibold text-orange-800 mb-1">⚡ Enjeux entreprise</h4>
-                       <p className="text-xs text-orange-700 leading-relaxed">Moderniser les pratiques traditionnelles tout en respectant la sensibilité du domaine funéraire et offrir un service de qualité aux familles endeuillées.</p>
-                     </div>
-                     
-                     <div className="bg-green-50 border-l-4 border-green-400 p-3 rounded-r-lg">
-                       <h4 className="text-xs font-semibold text-green-800 mb-1">🚀 Mise en place</h4>
-                       <p className="text-xs text-green-700 leading-relaxed">Analyse secteur funéraire → Conception UX sensible → Développement sécurisé → Tests familles → Formation équipe → Lancement progressif</p>
-                     </div>
-                     
-                     <div className="bg-purple-50 border-l-4 border-purple-400 p-3 rounded-r-lg">
-                       <h4 className="text-xs font-semibold text-purple-800 mb-1">✨ Bénéfices finaux</h4>
-                       <p className="text-xs text-purple-700 leading-relaxed">Plateforme respectueuse permettant création d'hommages personnalisés, collecte de dons, messages de condoléances et partage de souvenirs, adoptée par 200+ familles.</p>
-                     </div>
-                     
-                     <div className="bg-gray-50 border-l-4 border-gray-400 p-3 rounded-r-lg">
-                       <h4 className="text-xs font-semibold text-gray-800 mb-1">⏱️ Temps de réalisation</h4>
-                       <p className="text-xs text-gray-700 font-medium">4 mois</p>
-                     </div>
-                   </div>
-                 </div>
-               </div>
-             </ScrollAnimationWrapper>
-           </div>
+                        {/* Bulles d'information détaillées */}
+                        <div className="space-y-3">
+                          <div className="bg-blue-50 border-l-4 border-blue-400 p-3 rounded-r-lg">
+                            <h4 className="text-sm font-semibold text-blue-800 mb-1">🎯 Demande initiale</h4>
+                            <p className="text-sm text-blue-700 leading-relaxed">Digitaliser les services funéraires en créant une plateforme permettant aux familles de créer des pages d'hommage et recevoir des condoléances en ligne.</p>
+                          </div>
+                          
+                          <div className="bg-orange-50 border-l-4 border-orange-400 p-3 rounded-r-lg">
+                            <h4 className="text-sm font-semibold text-orange-800 mb-1">⚡ Enjeux entreprise</h4>
+                            <p className="text-sm text-orange-700 leading-relaxed">Moderniser les pratiques traditionnelles tout en respectant la sensibilité du domaine funéraire et offrir un service de qualité aux familles endeuillées.</p>
+                          </div>
+                          
+                          <div className="bg-green-50 border-l-4 border-green-400 p-3 rounded-r-lg">
+                            <h4 className="text-sm font-semibold text-green-800 mb-1">🚀 Mise en place</h4>
+                            <p className="text-sm text-green-700 leading-relaxed">Analyse secteur funéraire → Conception UX sensible → Développement sécurisé → Tests familles → Formation équipe → Lancement progressif</p>
+                          </div>
+                          
+                          <div className="bg-purple-50 border-l-4 border-purple-400 p-3 rounded-r-lg">
+                            <h4 className="text-sm font-semibold text-purple-800 mb-1">✨ Bénéfices finaux</h4>
+                            <p className="text-sm text-purple-700 leading-relaxed">Plateforme respectueuse permettant création d'hommages personnalisés, collecte de dons, messages de condoléances et partage de souvenirs, adoptée par 200+ familles.</p>
+                          </div>
+                          
+                          <div className="bg-gray-50 border-l-4 border-gray-400 p-3 rounded-r-lg">
+                            <h4 className="text-sm font-semibold text-gray-800 mb-1">⏱️ Temps de réalisation</h4>
+                            <p className="text-sm text-gray-700 font-medium">4 mois</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+              </ScrollAnimationWrapper>
+            </div>
         </div>
       </section>
 

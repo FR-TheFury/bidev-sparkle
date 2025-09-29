@@ -156,89 +156,94 @@ const Projets = () => {
       {/* Projects Grid */}
       <section className="py-20 px-4 bg-background">
         <div className="container mx-auto">
-          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+          <div className="space-y-12">
             {projets.map((projet, index) => (
               <ScrollAnimationWrapper 
                 key={projet.id} 
                 animation="fade-in" 
                 delay={`${index * 100}ms`}
               >
-                <Card className="group overflow-hidden border-0 shadow-elegant hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-card/50 backdrop-blur-sm h-[800px] flex flex-col">
-                  {/* Image */}
-                  <div className="relative overflow-hidden h-96">
-                    <img 
-                      src={projet.image} 
-                      alt={projet.titre}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    
-                    {/* Overlay Actions */}
-                    <div className="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <a 
-                        href={projet.lienDemo}
-                        className="p-2 bg-white/90 backdrop-blur-sm rounded-full hover:bg-white transition-colors"
-                        aria-label="Voir la démo"
-                      >
-                        <ExternalLink size={16} className="text-gray-800" />
-                      </a>
+                <Card className="group overflow-hidden border-0 shadow-elegant hover:shadow-2xl transition-all duration-500 bg-card/50 backdrop-blur-sm">
+                  <div className="grid lg:grid-cols-2 gap-0">
+                    {/* Image */}
+                    <div className="relative overflow-hidden h-64 sm:h-80 lg:h-96">
+                      <img 
+                        src={projet.image} 
+                        alt={projet.titre}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      
+                      {/* Overlay Actions */}
+                      <div className="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <a 
+                          href={projet.lienDemo}
+                          className="p-2 bg-white/90 backdrop-blur-sm rounded-full hover:bg-white transition-colors"
+                          aria-label="Voir la démo"
+                        >
+                          <ExternalLink size={16} className="text-gray-800" />
+                        </a>
+                      </div>
+
+                      {/* Category Badge */}
+                      <div className="absolute top-4 left-4">
+                        <Badge variant="secondary" className="bg-primary/90 text-primary-foreground">
+                          {projet.categorie}
+                        </Badge>
+                      </div>
                     </div>
 
-                    {/* Category Badge */}
-                    <div className="absolute top-4 left-4">
-                      <Badge variant="secondary" className="bg-primary/90 text-primary-foreground">
-                        {projet.categorie}
-                      </Badge>
-                    </div>
+                    {/* Content */}
+                    <CardContent className="p-6 lg:p-8 flex flex-col justify-between">
+                      <div>
+                        <div className="flex items-center justify-between mb-3">
+                          <div className="flex items-center text-sm text-muted-foreground">
+                            <Calendar size={14} className="mr-2" />
+                            {projet.date}
+                          </div>
+                          <div className="text-sm font-medium text-primary">
+                            {projet.client}
+                          </div>
+                        </div>
+
+                        <h3 className="text-2xl lg:text-3xl font-bold mb-4 group-hover:text-primary transition-colors">
+                          {projet.titre}
+                        </h3>
+                        
+                        <p className="text-muted-foreground leading-relaxed mb-6 text-base lg:text-lg">
+                          {projet.description}
+                        </p>
+
+                        {/* Bulles d'information détaillées */}
+                        <div className="space-y-3">
+                          <div className="bg-blue-50 border-l-4 border-blue-400 p-3 rounded-r-lg">
+                            <h4 className="text-sm font-semibold text-blue-800 mb-1">🎯 Demande initiale</h4>
+                            <p className="text-sm text-blue-700 leading-relaxed">{projet.details.besoins}</p>
+                          </div>
+                          
+                          <div className="bg-orange-50 border-l-4 border-orange-400 p-3 rounded-r-lg">
+                            <h4 className="text-sm font-semibold text-orange-800 mb-1">⚡ Enjeux entreprise</h4>
+                            <p className="text-sm text-orange-700 leading-relaxed">{projet.details.enjeux}</p>
+                          </div>
+                          
+                          <div className="bg-green-50 border-l-4 border-green-400 p-3 rounded-r-lg">
+                            <h4 className="text-sm font-semibold text-green-800 mb-1">🚀 Mise en place</h4>
+                            <p className="text-sm text-green-700 leading-relaxed">{projet.details.miseEnPlace}</p>
+                          </div>
+                          
+                          <div className="bg-purple-50 border-l-4 border-purple-400 p-3 rounded-r-lg">
+                            <h4 className="text-sm font-semibold text-purple-800 mb-1">✨ Bénéfices finaux</h4>
+                            <p className="text-sm text-purple-700 leading-relaxed">{projet.details.benefices}</p>
+                          </div>
+                          
+                          <div className="bg-gray-50 border-l-4 border-gray-400 p-3 rounded-r-lg">
+                            <h4 className="text-sm font-semibold text-gray-800 mb-1">⏱️ Temps de réalisation</h4>
+                            <p className="text-sm text-gray-700 font-medium">{projet.details.tempsRealisation}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </CardContent>
                   </div>
-
-                  <CardContent className="p-6 flex-1 flex flex-col">
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="flex items-center text-sm text-muted-foreground">
-                        <Calendar size={14} className="mr-2" />
-                        {projet.date}
-                      </div>
-                      <div className="text-sm font-medium text-primary">
-                        {projet.client}
-                      </div>
-                    </div>
-
-                    <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
-                      {projet.titre}
-                    </h3>
-                    
-                    <p className="text-muted-foreground leading-relaxed mb-4 line-clamp-2">
-                      {projet.description}
-                    </p>
-
-                    {/* Bulles d'information détaillées */}
-                    <div className="space-y-3 flex-1">
-                      <div className="bg-blue-50 border-l-4 border-blue-400 p-3 rounded-r-lg">
-                        <h4 className="text-xs font-semibold text-blue-800 mb-1">🎯 Demande initiale</h4>
-                        <p className="text-xs text-blue-700 leading-relaxed">{projet.details.besoins}</p>
-                      </div>
-                      
-                      <div className="bg-orange-50 border-l-4 border-orange-400 p-3 rounded-r-lg">
-                        <h4 className="text-xs font-semibold text-orange-800 mb-1">⚡ Enjeux entreprise</h4>
-                        <p className="text-xs text-orange-700 leading-relaxed">{projet.details.enjeux}</p>
-                      </div>
-                      
-                      <div className="bg-green-50 border-l-4 border-green-400 p-3 rounded-r-lg">
-                        <h4 className="text-xs font-semibold text-green-800 mb-1">🚀 Mise en place</h4>
-                        <p className="text-xs text-green-700 leading-relaxed">{projet.details.miseEnPlace}</p>
-                      </div>
-                      
-                      <div className="bg-purple-50 border-l-4 border-purple-400 p-3 rounded-r-lg">
-                        <h4 className="text-xs font-semibold text-purple-800 mb-1">✨ Bénéfices finaux</h4>
-                        <p className="text-xs text-purple-700 leading-relaxed">{projet.details.benefices}</p>
-                      </div>
-                      
-                      <div className="bg-gray-50 border-l-4 border-gray-400 p-3 rounded-r-lg">
-                        <h4 className="text-xs font-semibold text-gray-800 mb-1">⏱️ Temps de réalisation</h4>
-                        <p className="text-xs text-gray-700 font-medium">{projet.details.tempsRealisation}</p>
-                      </div>
-                    </div>
-                  </CardContent>
                 </Card>
               </ScrollAnimationWrapper>
             ))}
