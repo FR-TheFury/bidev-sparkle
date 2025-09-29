@@ -134,6 +134,9 @@ export default {
         "slide-up": "slide-up 0.8s ease-out",
         "float": "float 3s ease-in-out infinite",
       },
+      perspective: {
+        '1000': '1000px',
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
